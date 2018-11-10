@@ -1,3 +1,5 @@
+@font-face { font-family: 'Reklame Script'; src: url("../fonts/ReklameScript-Regular_DEMO.otf") format("opentype"); }
+
 /* Colors */
 /* Font sizes */
 /* Fonts */
@@ -173,10 +175,26 @@ template { display: none; }
 /*  M E D I A   Q U E R I E S    468 px    ********** */
 @media (max-width: 468px) { [class*="col"] { width: 100%; float: none; } }
 
-svg { width: 24px; height: 24px; fill: currentColor; vertical-align: text-top; }
+body { margin: 0; }
 
-.sidebar { height: 100%; width: 160px; position: fixed; z-index: 1; top: 0; left: 0; background-color: #111; overflow-x: hidden; padding-top: 16px; }
+.sidebar { height: 100%; width: 160px; padding: 10px 0px; position: fixed; z-index: 1; top: 0; left: 0; background-color: #111; overflow-x: hidden; padding-top: 16px; }
 
-.sidebar a { padding: 6px 8px 6px 16px; text-decoration: none; font-size: 16px; color: #818181; display: block; }
+.sidebar .logo { margin: 0; font-family: "Reklame Script"; color: white; margin-left: 10px; }
 
-.sidebar a:hover { color: #f1f1f1; }
+.sidebar a { text-decoration: none; padding: 5px; padding-top: 10px; font-size: 16px; color: #818181; display: block; }
+
+.sidebar a:hover { color: #f1f1f1; background-color: rgba(129, 129, 129, 0.3); border-left: 4px solid #e64f13; }
+
+.sidebar a svg { width: 24px; height: 24px; fill: currentColor; vertical-align: text-top; margin-left: 10px; }
+
+/* NAVIGATION */
+.sidebar .icon-hamburger { display: none; color: white; padding: 10px; cursor: pointer; font-size: 20px; }
+
+@media screen and (max-width: 600px) { .sidebar { height: auto; width: 100%; }
+  .sidebar .logo { float: left; }
+  .sidebar a:not(:first-child) { display: none; }
+  .sidebar .icon-hamburger { float: right; display: block; } }
+
+@media screen and (max-width: 600px) { .sidebar.responsive { position: relative; }
+  .sidebar.responsive .icon-hamburger { position: relative; right: 0; top: 0; }
+  .sidebar.responsive a { float: none; clear: both; display: block; text-align: left; } }

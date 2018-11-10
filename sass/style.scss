@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Reklame Script';
+  src: url("../fonts/ReklameScript-Regular_DEMO.otf") format("opentype");
+}
+
 @import "variables";
 @import "mixins";
 
@@ -7,16 +12,14 @@
 @import "components/icon";
 
 
-      svg {
-        width: 24px;
-        height: 24px;
-        fill: currentColor;
-        vertical-align: text-top;
-      }
+body {
+  margin: 0;
+}
 
-      .sidebar {
+.sidebar {
         height: 100%;
         width: 160px;
+        padding: 10px 0px;
         position: fixed;
         z-index: 1;
         top: 0;
@@ -24,19 +27,83 @@
         background-color: #111;
         overflow-x: hidden;
         padding-top: 16px;
+
+        .logo {
+          margin: 0;
+          font-family: "Reklame Script";
+          color: white;
+          margin-left: 10px;
+        }
+
+        a {
+          text-decoration: none;
+          padding: 5px;
+          padding-top: 10px;
+          font-size: 16px;
+          color: #818181;
+          display: block;
+
+          &:hover {
+            color: #f1f1f1;
+            background-color: rgba($color:  #818181, $alpha: 0.3);
+            border-left: 4px solid rgb(230, 79, 19);
+          }
+
+          svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+            vertical-align: text-top;
+            margin-left: 10px; 
+          }
+        }
       }
 
-      .sidebar a {
-        padding: 6px 8px 6px 16px;
-        text-decoration: none;
-        font-size: 16px;
-        color: #818181;
-        display: block;
-      }
+/* NAVIGATION */
 
-      .sidebar a:hover {
-        color: #f1f1f1;
-      }
+
+.sidebar .icon-hamburger {
+  display: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+@media screen and (max-width: 600px) {
+.sidebar{
+  height: auto;
+  width: 100%;
+  .logo {
+    float: left;
+  }
+
+}
+
+  .sidebar a:not(:first-child) {display: none;}
+  .sidebar .icon-hamburger  {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar.responsive {position: relative;}
+  .sidebar.responsive .icon-hamburger  {
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+  .sidebar.responsive a {
+    float: none;
+    clear: both;
+    display: block;
+    text-align: left;
+  }
+}
+
+      
 
 
 
