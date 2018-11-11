@@ -10,3 +10,77 @@
 @import "layout";
 
 @import "components/sidebar";
+
+nav {
+	background-color: #4577ED;
+  text-align: right;
+  width: 100%;
+  position: fixed; 
+  font-size: 0;
+}
+/* ***************  ************************ */
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;	 /* turn off bullets*/
+}
+/* ***************  ************************ */
+nav ul li {
+	display: inline-block;
+	-webkit-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+  
+  border-left: rgb(184, 184, 184) 1px solid;
+
+}
+/* *************** ************************ */
+nav > ul > li > a {
+	height: 50px;
+	display: inline-block;
+	line-height: 50px;
+	padding: 0 30px;
+	color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+/* ***********  hide the lower level menu*********** */
+nav ul ul {
+  display: none;	
+  font-size: 14px;
+}
+/* ***************  ********************* */
+nav ul ul li {
+	display: block;	
+	text-align: left;
+	-webkit-transition: background-color 1.5s ease-out;
+	transition: background-color 1.5s ease-out;
+}
+/* *************** ************** */
+nav ul ul li a {
+	display: inline-block;
+	padding: 15px 30px;
+	color: white;
+	text-decoration: none;	
+}
+/* ***************  ********************* */
+nav li:hover ul {
+	display: block;	
+	position: absolute;
+	background-color: #4577ED;
+}
+/* ***************  ********************* */
+nav li:hover {
+	background-color: black;
+}
+
+
+
+.notification .badge {
+  position: relative;
+  top: -40px;
+  right: -20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+}

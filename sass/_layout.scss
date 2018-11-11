@@ -4,6 +4,15 @@
     padding: 0;
     font-family: $main-font;
   }
+
+  body{
+      background-color: rgb(184, 184, 184);
+  }
+
+  .container {
+	width: 100%;
+	margin: 0 auto;
+}
 /*  --clearfix-------------------------------------------------------- */
 .row:before,
 .row:after {
@@ -12,6 +21,9 @@
      clear: both;
 }
 /*  GRID */
+.col {
+    float: left;
+}
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -28,11 +40,7 @@
 
 
 
-.container {
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-}
+
 
 /*  M E D I A   Q U E R I E S    1200 px    ********** */ 
 @media (max-width: 1200px) {

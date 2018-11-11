@@ -1,3 +1,11 @@
+svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  vertical-align: text-top;
+  margin-left: 10px;
+}
+
 .sidebar {
   height: 100%;
   padding: 10px 0px;
@@ -39,13 +47,7 @@
       border-left: 4px solid rgb(230, 79, 19);
     }
 
-    svg {
-      width: 24px;
-      height: 24px;
-      fill: currentColor;
-      vertical-align: text-top;
-      margin-left: 10px;
-    }
+
   }
   .people {
     color: #818181;
