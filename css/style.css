@@ -204,28 +204,23 @@ svg { width: 24px; height: 24px; fill: currentColor; vertical-align: text-top; m
   .sidebar.responsive .part2Sidebar { display: block; }
   .sidebar.responsive a { float: none; clear: both; display: block; text-align: left; } }
 
-nav { background-color: #4577ED; text-align: right; width: 100%; position: fixed; font-size: 0; }
+nav { background-color: #4577ed; text-align: right; width: 100%; position: fixed; font-size: 0; /* ***************  ************************ */ /* ***************  ************************ */ }
 
-/* ***************  ************************ */
-nav ul { padding: 0; margin: 0; list-style-type: none; /* turn off bullets*/ }
+nav ul { padding: 0; margin: 0; list-style-type: none; /* turn off bullets*/ /* ***************  ************************ */ }
 
-/* ***************  ************************ */
+nav ul ul { display: none; font-size: 14px; }
+
+nav ul ul li { display: block; text-align: left; transition: background-color 1.5s ease-out; }
+
+nav ul ul li a { display: inline-block; padding: 15px 30px; color: white; text-decoration: none; }
+
 nav ul li { display: inline-block; transition: background-color 1s ease-out; border-left: #b8b8b8 1px solid; }
 
 /* *************** ************************ */
 nav > ul > li > a { height: 50px; display: inline-block; line-height: 50px; padding: 0 30px; color: white; text-decoration: none; font-size: 14px; }
 
-/* ***********  hide the lower level menu*********** */
-nav ul ul { display: none; font-size: 14px; }
-
 /* ***************  ********************* */
-nav ul ul li { display: block; text-align: left; transition: background-color 1.5s ease-out; }
-
-/* *************** ************** */
-nav ul ul li a { display: inline-block; padding: 15px 30px; color: white; text-decoration: none; }
-
-/* ***************  ********************* */
-nav li:hover ul { display: block; position: absolute; background-color: #4577ED; }
+nav li:hover ul { display: block; position: absolute; background-color: #4577ed; }
 
 /* ***************  ********************* */
 nav li:hover { background-color: black; }
