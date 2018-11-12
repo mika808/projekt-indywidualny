@@ -9,7 +9,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
     <script src="js/script.js"></script>
+
     <title>Document</title>
   </head>
 
@@ -22,6 +24,14 @@
       style="display: none;"
     >
       <defs>
+        <!-- BUTTONS -->
+        <g id="icon-refresh">
+          <path
+            d="M11,6h5V1h-1v3.3l-1.2-1.1c-2.9-2.9-7.7-2.9-10.6,0c-2.9,2.9-2.9,7.7,0,10.6C4.7,15.3,6.6,16,8.5,16s3.8-0.7,5.3-2.2
+            l-0.7-0.7c-2.5,2.5-6.7,2.5-9.2,0c-2.5-2.5-2.5-6.7,0-9.2c2.5-2.5,6.7-2.5,9.2,0L14.2,5H11V6z"
+          />
+        </g>
+        <!-- TOP NAV -->
         <g id="icon-wallet">
           <path
             d="M17,9h-2V7.5C15,6.1,13.9,5,12.5,5H4.9L12,2.2V4h1V0.8L2.1,5C0.9,5.2,0,6.3,0,7.5v8C0,16.9,1.1,18,2.5,18h10
@@ -100,138 +110,140 @@
         </g>
       </defs>
     </svg>
-    <!-- TOP NAVIGATION -->
 
-    <div class="container">
-      <div class="row">
-        <div class="col col-4">
-          <!-- SIDEBAR -->
+    <!-- SIDEBAR -->
+    <div class="sidebar" id="sidebarNav">
+      <h1 class="logo">Just do it</h1>
 
-          <div class="sidebar" id="sidebarNav">
-            <h1 class="logo">Just do it</h1>
-
-            <div class="icon-hamburger" onclick="showMenu()">
-              <i class="fa fa-bars"></i>
-            </div>
-
-            <!-- GENERAL -->
-            <a href="#general">
-              <svg viewBox="0 0 24 24">
-                <use xlink:href="#icon-general"></use>
-              </svg>
-              General
-            </a>
-
-            <!-- DETAILS -->
-            <a href="#details">
-              <svg viewBox="0 0 24 24">
-                <use xlink:href="#icon-details"></use>
-              </svg>
-              Details
-            </a>
-            <!-- LINKS -->
-            <a href="#links">
-              <svg viewBox="0 0 24 20">
-                <use xlink:href="#icon-links"></use>
-              </svg>
-              Links
-            </a>
-            <!-- BANNERS -->
-            <a href="#banners">
-              <svg viewBox="0 0 24 20">
-                <use xlink:href="#icon-banners"></use>
-              </svg>
-              Banners
-            </a>
-            <!-- PERSONAL DATA -->
-            <a href="#personalData">
-              <svg viewBox="0 0 24 24">
-                <use xlink:href="#icon-personalData"></use>
-              </svg>
-              Personal data
-            </a>
-            <!-- PAYOUT -->
-            <a href="#payout">
-              <svg viewBox="0 0 24 20">
-                <use xlink:href="#icon-payout"></use>
-              </svg>
-              Payout
-            </a>
-            <!-- POSTBACK -->
-            <a href="#postback">
-              <svg viewBox="0 0 24 24">
-                <use xlink:href="#icon-postback"></use>
-              </svg>
-              Postback
-            </a>
-
-            <div class="part2Sidebar">
-              <hr />
-              <!-- PEOPLE -->
-              <div class="people">
-                <h4>YOUR MANAGER</h4>
-                <img src="images/manager.jpeg" alt="manager" />
-                <span>Marian Nowak</span>
-              </div>
-            </div>
-          </div>
-          <!-- SIDEBAR_ end -->
-        </div>
-
-        <div class="col col-8">
-          <nav>
-            <ul>
-              <!-- __________________ -->
-              <li>
-                <a href="#">
-                  <svg viewBox="0 0 24 24">
-                    <use xlink:href="#icon-wallet"></use>
-                  </svg>
-                  $ 2.000 <i class="fa fa-caret-down"></i>
-                </a>
-                <ul>
-                  <li><a href="#"> € 2.000</a></li>
-                  <li><a href="#"> &pound; 2.000</a></li>
-                </ul>
-              </li>
-              <!-- __________________ -->
-              <li>
-                <a href="#" class="notification">
-                  <svg viewBox="0 0 24 24">
-                    <use xlink:href="#icon-notification"></use>
-                  </svg>
-                  <div class="badge"></div>
-                </a>
-              </li>
-
-              <!-- __________________ -->
-              <li>
-                <a href="#">
-                  <svg viewBox="0 0 24 24">
-                    <use xlink:href="#icon-profile"></use>
-                  </svg>
-                  Leonardo DiCaprio
-                </a>
-              </li>
-              <!-- __________________ -->
-              <li>
-                  <a href="#">
-                    <svg viewBox="0 0 24 24">
-                      <use xlink:href="#icon-quit"></use>
-                    </svg>
-                  </a>
-                </li>
-
-            </ul>
-          </nav>
-        </div>
+      <div class="icon-hamburger" onclick="showMenu()">
+        <i class="fa fa-bars"></i>
       </div>
-    <!-- GENERAL STATISTIC-->
-      <div class="row">
-          <div class="genStat">
-            GENERAL STATISTICS
-          </div>
+
+      <!-- GENERAL -->
+      <a href="#general">
+        <svg viewBox="0 0 24 24"><use xlink:href="#icon-general"></use></svg>
+        General
+      </a>
+
+      <!-- DETAILS -->
+      <a href="#details">
+        <svg viewBox="0 0 24 24"><use xlink:href="#icon-details"></use></svg>
+        Details
+      </a>
+      <!-- LINKS -->
+      <a href="#links">
+        <svg viewBox="0 0 24 20"><use xlink:href="#icon-links"></use></svg>
+        Links
+      </a>
+      <!-- BANNERS -->
+      <a href="#banners">
+        <svg viewBox="0 0 24 20"><use xlink:href="#icon-banners"></use></svg>
+        Banners
+      </a>
+      <!-- PERSONAL DATA -->
+      <a href="#personalData">
+        <svg viewBox="0 0 24 24">
+          <use xlink:href="#icon-personalData"></use>
+        </svg>
+        Personal data
+      </a>
+      <!-- PAYOUT -->
+      <a href="#payout">
+        <svg viewBox="0 0 24 20"><use xlink:href="#icon-payout"></use></svg>
+        Payout
+      </a>
+      <!-- POSTBACK -->
+      <a href="#postback">
+        <svg viewBox="0 0 24 24"><use xlink:href="#icon-postback"></use></svg>
+        Postback
+      </a>
+
+      <div class="part2Sidebar">
+        <hr />
+        <!-- PEOPLE -->
+        <div class="people">
+          <h4>YOUR MANAGER</h4>
+          <img src="images/manager.jpeg" alt="manager" />
+          <span>Marian Nowak</span>
+        </div>
       </div>
     </div>
+
+    <!-- TOP NAVIGATION -->
+    <nav>
+      <ul>
+        <!-- __________________ -->
+        <li>
+          <a href="#">
+            <svg viewBox="0 0 24 24"><use xlink:href="#icon-wallet"></use></svg>
+            $ 2.000 <i class="fa fa-caret-down"></i>
+          </a>
+          <ul>
+            <li><a href="#"> € 2.000</a></li>
+            <li><a href="#"> &pound; 2.000</a></li>
+          </ul>
+        </li>
+        <!-- __________________ -->
+        <li>
+          <a href="#" class="notification">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href="#icon-notification"></use>
+            </svg>
+            <div class="badge"></div>
+          </a>
+        </li>
+
+        <!-- __________________ -->
+        <li>
+          <a href="#">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href="#icon-profile"></use>
+            </svg>
+            Leonardo DiCaprio
+          </a>
+        </li>
+        <!-- __________________ -->
+        <li>
+          <a href="#">
+            <svg viewBox="0 0 24 24"><use xlink:href="#icon-quit"></use></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- GENERAL STATISTIC -->
+    <div class="container">
+      <div class="row">
+        <div class="col col-4"><br /></div>
+        <div class="col col-8">
+          <div id="general" class="displayBox">
+            GENERAL STATISTIC
+            <hr />
+            <div class="calendar">
+              <input type="date" /> <input type="date" />
+              <button class="btn btn-refresh">
+                  <svg viewBox="0 0 24 24" xml:space="preserve">
+                      <use xlink:href="#icon-refresh"></use>
+                    </svg>
+              </button>
+            </div>
+            <hr />
+   
+            
+
+            <div id="chart">
+              <canvas id="myChart" width="500" height="400"></canvas>
+            </div>
+          </div>
+
+          <div id="links" class="displayBox">
+            LINKS
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="js/chart1.js"></script>
   </body>
 </html>
