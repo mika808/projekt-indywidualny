@@ -118,6 +118,8 @@ body { background-color: #b8b8b8; }
 
 .container { width: 100%; margin: 0 auto; max-width: 1200px; padding-top: 50px; }
 
+.displayBox { background-color: white; padding: 15px; margin: 20px; box-shadow: 2px 2px 20px #444; }
+
 /*  --clearfix-------------------------------------------------------- */
 .row:before, .row:after { content: ""; display: table; clear: both; }
 
@@ -179,9 +181,18 @@ body { background-color: #b8b8b8; }
 /*  M E D I A   Q U E R I E S    468 px    ********** */
 @media (max-width: 468px) { [class*="col"] { width: 100%; float: none; } }
 
+/* Components */
+.btn { background-color: #ff7b00; border: none; color: white; font-size: 16px; border-radius: 5%; cursor: pointer; }
+
+.btn:hover { background-color: RoyalBlue; }
+
+.btn-refresh { margin: 15px; }
+
+.btn-addNew { text-align: center; display: block; margin: 20px auto; }
+
 svg { width: 24px; height: 24px; fill: currentColor; vertical-align: text-top; margin-left: 10px; }
 
-.sidebar { height: 100%; width: 30%; padding: 10px 0px; position: fixed; z-index: 1; top: 0; left: 0; background-color: #111; overflow-x: hidden; padding-top: 16px; }
+.sidebar { height: 100%; width: 33.33%; padding: 10px 0px; position: fixed; z-index: 1; top: 0; left: 0; background-color: #111; overflow-x: hidden; padding-top: 16px; }
 
 .sidebar .logo { margin: 0; font-family: "Reklame Script"; color: white; margin-left: 10px; }
 
@@ -227,12 +238,11 @@ nav li:hover { background-color: black; }
 
 .notification .badge { position: relative; top: -40px; right: -20px; width: 10px; height: 10px; border-radius: 50%; background-color: #ff7b00; }
 
-.displayBox { background-color: white; padding: 15px; margin: 20px; box-shadow: 2px 2px 20px #444; }
-
+/* Sections */
 .calendar { padding: 20px; }
 
-.btn { background-color: #ff7b00; border: none; color: white; font-size: 16px; border-radius: 5%; cursor: pointer; }
+.financialSection { margin: 15px 0px; color: gray; }
 
-.btn:hover { background-color: RoyalBlue; }
+.financialSection .financialData { padding: 7px 0px; border-bottom: 1px gray solid; margin: 0 15px; }
 
-.btn-refresh { margin: 15px; }
+.financialSection .financialData span:nth-child(2) { float: right; color: black; }

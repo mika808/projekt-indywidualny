@@ -216,29 +216,53 @@
       <div class="row">
         <div class="col col-4"><br /></div>
         <div class="col col-8">
+          <!-- GENERAL STATISTIC -->
           <div id="general" class="displayBox">
             GENERAL STATISTIC
             <hr />
             <div class="calendar">
               <input type="date" /> <input type="date" />
               <button class="btn btn-refresh">
-                  <svg viewBox="0 0 24 24" xml:space="preserve">
-                      <use xlink:href="#icon-refresh"></use>
-                    </svg>
+                <svg viewBox="0 0 24 24" xml:space="preserve">
+                  <use xlink:href="#icon-refresh"></use>
+                </svg>
               </button>
             </div>
             <hr />
-   
-            
+
+            <div class="row financialSection">
+              <div class="col col-6">
+                <div class="financialData">
+                  <span>Visit Signups</span> <span>124</span>
+                </div>
+
+                <div class="financialData">
+                  <span>FTD</span> <span>445</span>
+                </div>
+              </div>
+              <div class="col col-6">
+                <div class="financialData">
+                  <span>Net deposit</span> <span>564</span>
+                </div>
+                <div class="financialData">
+                  <span>Turn over</span> <span>432</span>
+                </div>
+              </div>
+            </div>
 
             <div id="chart">
               <canvas id="myChart" width="500" height="400"></canvas>
             </div>
           </div>
-
+          <!-- LINKS -->
           <div id="links" class="displayBox">
             LINKS
             <hr />
+            <div class="row">
+            <button  class="btn btn-addNew">
+             + add new 
+            </button>
+          </div>
           </div>
         </div>
       </div>

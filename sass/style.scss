@@ -9,33 +9,12 @@
 @import "normalize";
 @import "layout";
 
+/* Components */
+@import "components/button";
 @import "components/sidebar";
 @import "components/topNav";
 
-.displayBox {	
-	background-color: white;
-	padding: 15px;
-	margin: 20px;
-	box-shadow: 2px 2px 20px #444;
-}
+/* Sections */
+@import "sections/generalData";
 
-.calendar{
-	padding: 20px;
-}
 
-.btn {
-    background-color: rgb(255, 123, 0);
-    border: none;
-	color: white;
-	font-size: 16px;
-	border-radius: 5%;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: RoyalBlue;
-}
-
-.btn-refresh{
-	margin: 15px;
-}
