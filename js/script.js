@@ -1,3 +1,5 @@
+var iconHam = document.querySelector(".icon-hamburger");
+
 function showMenu() {
     var x = document.getElementById("sidebarNav");
     if (x.className === "sidebar") {
@@ -7,5 +9,4 @@ function showMenu() {
     }
 }
 
-
-
+iconHam.addEventListener("click", showMenu)

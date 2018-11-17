@@ -8,7 +8,8 @@ svg {
 
 .sidebar {
   height: 100%;
-  width: 33.33%;
+  width: 100%;
+  max-width: 220px;
   padding: 10px 0px;
   position: fixed;
   z-index: 1;
@@ -21,8 +22,9 @@ svg {
   .logo {
     margin: 0;
     font-family: "Reklame Script";
-    color: white;
-    margin-left: 10px;
+    color: #fff;
+    margin-left: 20px;
+    margin-bottom: 20px;
   }
 
   .icon-hamburger {
@@ -33,14 +35,21 @@ svg {
     font-size: 20px;
   }
 
+  hr {
+    border: none;
+    border-top: 1px solid #252525;
+    margin-top: 10px;
+  }
+
   a {
     color: #818181;
     text-decoration: none;
     padding: 5px;
-    padding-top: 10px;
+    padding-top: 15px;
     font-size: 16px;
-
+    border-left: 4px solid #111;
     display: block;
+    transition: .2s;
 
     &:hover {
       color: #f1f1f1;
@@ -66,10 +75,11 @@ svg {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .sidebar {
     height: auto;
     width: 100%;
+    max-width: inherit;
 
     .logo {
       float: left;

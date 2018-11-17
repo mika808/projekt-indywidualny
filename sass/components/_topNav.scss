@@ -1,4 +1,4 @@
-nav {
+.top-nav {
   background-color: #4577ed;
   text-align: right;
   width: 100%;
@@ -67,4 +67,19 @@ nav li:hover {
   height: 10px;
   border-radius: 50%;
   background-color:rgb(255, 123, 0);
+}
+
+
+.top-menu-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar.responsive .top-menu-mobile {
+    display: block;
+  }
+
+  .top-nav {
+    display: none;
+  }
 }

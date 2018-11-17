@@ -116,9 +116,11 @@ template { display: none; }
 
 body { background-color: #b8b8b8; }
 
-.container { width: 100%; margin: 0 auto; max-width: 1200px; padding-top: 50px; }
+.container { width: 100%; margin: 0 auto; padding-top: 50px; padding-left: 220px; }
 
-.displayBox { background-color: white; padding: 15px; margin: 20px; box-shadow: 2px 2px 20px #444; }
+.displayBox { background-color: white; padding: 15px; margin: 20px; box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2); }
+
+.displayBox h1 { font-size: 15px; border-bottom: 1px solid #dadada; padding: 20px; margin: -15px; color: gray; }
 
 /*  --clearfix-------------------------------------------------------- */
 .row:before, .row:after { content: ""; display: table; clear: both; }
@@ -176,7 +178,9 @@ body { background-color: #b8b8b8; }
   .col-sm-9 { width: 75%; }
   .col-sm-10 { width: 83.33%; }
   .col-sm-11 { width: 91.66%; }
-  .col-sm-12 { width: 100%; } }
+  .col-sm-12 { width: 100%; }
+  .container { padding: 0; padding-top: 80px; }
+  .displayBox { margin: 0; } }
 
 /*  M E D I A   Q U E R I E S    468 px    ********** */
 @media (max-width: 468px) { [class*="col"] { width: 100%; float: none; } }
@@ -192,13 +196,15 @@ body { background-color: #b8b8b8; }
 
 svg { width: 24px; height: 24px; fill: currentColor; vertical-align: text-top; margin-left: 10px; }
 
-.sidebar { height: 100%; width: 33.33%; padding: 10px 0px; position: fixed; z-index: 1; top: 0; left: 0; background-color: #111; overflow-x: hidden; padding-top: 16px; }
+.sidebar { height: 100%; width: 100%; max-width: 220px; padding: 10px 0px; position: fixed; z-index: 1; top: 0; left: 0; background-color: #111; overflow-x: hidden; padding-top: 16px; }
 
-.sidebar .logo { margin: 0; font-family: "Reklame Script"; color: white; margin-left: 10px; }
+.sidebar .logo { margin: 0; font-family: "Reklame Script"; color: #fff; margin-left: 20px; margin-bottom: 20px; }
 
 .sidebar .icon-hamburger { display: none; color: white; padding: 10px; cursor: pointer; font-size: 20px; }
 
-.sidebar a { color: #818181; text-decoration: none; padding: 5px; padding-top: 10px; font-size: 16px; display: block; }
+.sidebar hr { border: none; border-top: 1px solid #252525; margin-top: 10px; }
+
+.sidebar a { color: #818181; text-decoration: none; padding: 5px; padding-top: 15px; font-size: 16px; border-left: 4px solid #111; display: block; transition: .2s; }
 
 .sidebar a:hover { color: #f1f1f1; background-color: rgba(129, 129, 129, 0.3); border-left: 4px solid #e64f13; }
 
@@ -206,7 +212,7 @@ svg { width: 24px; height: 24px; fill: currentColor; vertical-align: text-top; m
 
 .sidebar .people img { margin-top: 10px; margin-right: 10px; width: 50px; height: 50px; border-radius: 50px; vertical-align: middle; }
 
-@media screen and (max-width: 600px) { .sidebar { height: auto; width: 100%; }
+@media screen and (max-width: 768px) { .sidebar { height: auto; width: 100%; max-width: inherit; }
   .sidebar .logo { float: left; }
   .sidebar a, .sidebar .part2Sidebar { display: none; }
   .sidebar .icon-hamburger { float: right; display: block; }
@@ -215,17 +221,17 @@ svg { width: 24px; height: 24px; fill: currentColor; vertical-align: text-top; m
   .sidebar.responsive .part2Sidebar { display: block; }
   .sidebar.responsive a { float: none; clear: both; display: block; text-align: left; } }
 
-nav { background-color: #4577ed; text-align: right; width: 100%; position: fixed; font-size: 0; /* ***************  ************************ */ /* ***************  ************************ */ }
+.top-nav { background-color: #4577ed; text-align: right; width: 100%; position: fixed; font-size: 0; /* ***************  ************************ */ /* ***************  ************************ */ }
 
-nav ul { padding: 0; margin: 0; list-style-type: none; /* turn off bullets*/ /* ***************  ************************ */ }
+.top-nav ul { padding: 0; margin: 0; list-style-type: none; /* turn off bullets*/ /* ***************  ************************ */ }
 
-nav ul ul { display: none; font-size: 14px; }
+.top-nav ul ul { display: none; font-size: 14px; }
 
-nav ul ul li { display: block; text-align: left; transition: background-color 1.5s ease-out; }
+.top-nav ul ul li { display: block; text-align: left; transition: background-color 1.5s ease-out; }
 
-nav ul ul li a { display: inline-block; padding: 15px 30px; color: white; text-decoration: none; }
+.top-nav ul ul li a { display: inline-block; padding: 15px 30px; color: white; text-decoration: none; }
 
-nav ul li { display: inline-block; transition: background-color 1s ease-out; border-left: #b8b8b8 1px solid; }
+.top-nav ul li { display: inline-block; transition: background-color 1s ease-out; border-left: #b8b8b8 1px solid; }
 
 /* *************** ************************ */
 nav > ul > li > a { height: 50px; display: inline-block; line-height: 50px; padding: 0 30px; color: white; text-decoration: none; font-size: 14px; }
@@ -238,10 +244,15 @@ nav li:hover { background-color: black; }
 
 .notification .badge { position: relative; top: -40px; right: -20px; width: 10px; height: 10px; border-radius: 50%; background-color: #ff7b00; }
 
+.top-menu-mobile { display: none; }
+
+@media (max-width: 768px) { .sidebar.responsive .top-menu-mobile { display: block; }
+  .top-nav { display: none; } }
+
 /* Sections */
 .calendar { padding: 20px; }
 
-.financialSection { margin: 15px 0px; color: gray; }
+.financialSection { color: gray; max-width: 800px; margin: 30px auto; }
 
 .financialSection .financialData { padding: 7px 0px; border-bottom: 1px gray solid; margin: 0 15px; }
 
