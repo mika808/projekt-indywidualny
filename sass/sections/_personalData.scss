@@ -1,0 +1,31 @@
+form {
+    .form-label {
+      color: $main-font-color;
+      font-weight: bold;
+      text-align: left;
+      display: inline-block;
+      //margin: 10px 30px;
+      margin: 10px 0px;
+    }
+  
+    .form-personal-data {
+      margin: 10px 10vw;
+  
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="password"] {
+        padding: 5px 10px;
+        font-size: 14px;
+        border: 1px rgb(172, 172, 172) solid;
+        border-radius: 5px;
+        //margin-top: 10px;
+        width: 100%;
+        outline: none;
+  
+        &:focus {
+          border: 1px rgb(35, 4, 211) solid;
+        }
+      }
+    }
+  }

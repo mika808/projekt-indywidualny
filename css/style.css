@@ -122,6 +122,8 @@ body { background-color: #b8b8b8; }
 
 .displayBox h1 { font-size: 15px; border-bottom: 1px solid #dadada; padding: 15px; padding-top: 0px; color: gray; }
 
+.separator-line { border-bottom: 1px solid #dadada; padding-top: 0px; margin: 18px; }
+
 /*  --clearfix-------------------------------------------------------- */
 .row:before, .row:after { content: ""; display: table; clear: both; }
 
@@ -192,7 +194,7 @@ body { background-color: #b8b8b8; }
 
 .btn-refresh { margin: 15px; }
 
-.btn-addNew { text-align: center; display: block; margin: 20px auto; padding: 5px 30px; }
+.btn-center { text-align: center; display: block; margin: 20px auto; padding: 5px 30px; }
 
 svg { width: 24px; height: 24px; fill: currentColor; vertical-align: text-top; margin-left: 10px; }
 
@@ -249,6 +251,15 @@ nav li:hover { background-color: black; }
 @media (max-width: 768px) { .sidebar.responsive .top-menu-mobile { display: block; }
   .top-nav { display: none; } }
 
+/* Sections */
+.calendar { padding: 20px; }
+
+.financialSection { color: gray; max-width: 800px; margin: 30px auto; }
+
+.financialSection .financialData { padding: 7px 0px; border-bottom: 1px gray solid; margin: 0 15px; }
+
+.financialSection .financialData span:nth-child(2) { float: right; color: black; }
+
 .table-link { margin: auto 5vw; padding: 20px; height: 60px; border-bottom: 1px #a6a6a6 solid; border-top: 1px #a6a6a6 solid; margin-top: -1px; }
 
 .table-link div:first-child { color: #a6a6a6; font-weight: bold; }
@@ -271,11 +282,10 @@ nav li:hover { background-color: black; }
   .table-link div:nth-child(2) { padding: 10px 0; }
   .table-link .tableSvg { text-align: center; } }
 
-/* Sections */
-.calendar { padding: 20px; }
+form .form-label { color: #a6a6a6; font-weight: bold; text-align: left; display: inline-block; margin: 10px 0px; }
 
-.financialSection { color: gray; max-width: 800px; margin: 30px auto; }
+form .form-personal-data { margin: 10px 10vw; }
 
-.financialSection .financialData { padding: 7px 0px; border-bottom: 1px gray solid; margin: 0 15px; }
+form .form-personal-data input[type="text"], form .form-personal-data input[type="email"], form .form-personal-data input[type="tel"], form .form-personal-data input[type="password"] { padding: 5px 10px; font-size: 14px; border: 1px #acacac solid; border-radius: 5px; width: 100%; outline: none; }
 
-.financialSection .financialData span:nth-child(2) { float: right; color: black; }
+form .form-personal-data input[type="text"]:focus, form .form-personal-data input[type="email"]:focus, form .form-personal-data input[type="tel"]:focus, form .form-personal-data input[type="password"]:focus { border: 1px #2304d3 solid; }
