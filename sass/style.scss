@@ -3,6 +3,12 @@
   src: url("../fonts/ReklameScript-Regular_DEMO.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "ITC Franklin Gothic";
+  src: url("../fonts/itc-franklin-gothic-std/ITCFranklinGothicStd-Book.otf")
+    format("opentype");
+}
+
 @import "variables";
 @import "mixins";
 
@@ -18,5 +24,6 @@
 @import "sections/generalData";
 @import "sections/links";
 @import "sections/personalData";
+@import "sections/details";
 
 

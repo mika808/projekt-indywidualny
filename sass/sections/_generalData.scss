@@ -1,15 +1,11 @@
-.calendar {
-    padding: 20px;
-  }
-
   .financialSection {
-    color: gray;
+    color: $main-font-color;
     max-width: 800px;
     margin: 30px auto;
 
     .financialData {
       padding: 7px 0px;
-      border-bottom: 1px gray solid;
+      border-bottom: 1px $main-font-color solid;
       margin: 0 15px;
 
       span:nth-child(2) {

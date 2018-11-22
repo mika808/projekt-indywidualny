@@ -28,7 +28,15 @@
     border-bottom: 1px solid #dadada;
     padding: 15px;
     padding-top: 0px;
-    color: gray;
+    color: $main-font-color;
+    font-family: 'ITC Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .calendar {
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+    //padding: 5px 30px; 
   }
 
   .separator-line {

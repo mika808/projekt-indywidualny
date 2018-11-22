@@ -1,5 +1,7 @@
 @font-face { font-family: "Reklame Script"; src: url("../fonts/ReklameScript-Regular_DEMO.otf") format("opentype"); }
 
+@font-face { font-family: "ITC Franklin Gothic"; src: url("../fonts/itc-franklin-gothic-std/ITCFranklinGothicStd-Book.otf") format("opentype"); }
+
 /* Colors */
 /* Font sizes */
 /* Fonts */
@@ -120,7 +122,9 @@ body { background-color: #b8b8b8; }
 
 .displayBox { background-color: white; padding: 15px; margin: 20px; box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2); }
 
-.displayBox h1 { font-size: 15px; border-bottom: 1px solid #dadada; padding: 15px; padding-top: 0px; color: gray; }
+.displayBox h1 { font-size: 15px; border-bottom: 1px solid #dadada; padding: 15px; padding-top: 0px; color: #a6a6a6; font-family: 'ITC Franklin Gothic', 'Arial Narrow', Arial, sans-serif; }
+
+.calendar { text-align: center; display: block; margin: 20px auto; }
 
 .separator-line { border-bottom: 1px solid #dadada; padding-top: 0px; margin: 18px; }
 
@@ -204,8 +208,6 @@ svg { width: 24px; height: 24px; fill: currentColor; vertical-align: text-top; m
 
 .sidebar .icon-hamburger { display: none; color: white; padding: 10px; cursor: pointer; font-size: 20px; }
 
-.sidebar hr { border: none; border-top: 1px solid #252525; margin-top: 10px; }
-
 .sidebar a { color: #818181; text-decoration: none; padding: 5px; padding-top: 15px; font-size: 16px; border-left: 4px solid #111; display: block; transition: .2s; }
 
 .sidebar a:hover { color: #f1f1f1; background-color: rgba(129, 129, 129, 0.3); border-left: 4px solid #e64f13; }
@@ -252,11 +254,9 @@ nav li:hover { background-color: black; }
   .top-nav { display: none; } }
 
 /* Sections */
-.calendar { padding: 20px; }
+.financialSection { color: #a6a6a6; max-width: 800px; margin: 30px auto; }
 
-.financialSection { color: gray; max-width: 800px; margin: 30px auto; }
-
-.financialSection .financialData { padding: 7px 0px; border-bottom: 1px gray solid; margin: 0 15px; }
+.financialSection .financialData { padding: 7px 0px; border-bottom: 1px #a6a6a6 solid; margin: 0 15px; }
 
 .financialSection .financialData span:nth-child(2) { float: right; color: black; }
 
@@ -289,3 +289,35 @@ form .form-personal-data { margin: 10px 10vw; }
 form .form-personal-data input[type="text"], form .form-personal-data input[type="email"], form .form-personal-data input[type="tel"], form .form-personal-data input[type="password"] { padding: 5px 10px; font-size: 14px; border: 1px #acacac solid; border-radius: 5px; width: 100%; outline: none; }
 
 form .form-personal-data input[type="text"]:focus, form .form-personal-data input[type="email"]:focus, form .form-personal-data input[type="tel"]:focus, form .form-personal-data input[type="password"]:focus { border: 1px #2304d3 solid; }
+
+.scroll-wrapper { display: block; width: 100%; overflow-x: auto; }
+
+.scroll-wrapper .detail-statistic-table { border-collapse: collapse; width: 100%; max-width: 100%; margin-top: 30px; }
+
+.scroll-wrapper .detail-statistic-table tr { border-bottom: 1px solid #dddddd; }
+
+.scroll-wrapper .detail-statistic-table tr td, .scroll-wrapper .detail-statistic-table tr th { text-align: left; padding: 14px; color: #000; font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
+
+.scroll-wrapper .detail-statistic-table tr td { font-weight: 200; }
+
+.scroll-wrapper .detail-statistic-table tr th { color: #ccc; white-space: nowrap; padding: 8px; }
+
+.scroll-wrapper .detail-statistic-table tr th .icon-arrowUp { vertical-align: middle; }
+
+.scroll-wrapper .detail-statistic-table tr th span { padding: 5px; }
+
+.scroll-wrapper .detail-statistic-table tr th span:hover { background-color: #f3f5f6; cursor: pointer; color: #000; font-weight: bolder; }
+
+.scroll-wrapper .detail-statistic-table tr th span:hover .icon-arrowUp { color: #a6a6a6; }
+
+.scroll-wrapper .detail-statistic-table tbody tr:hover { background-color: #f3f5f6; cursor: pointer; }
+
+.pagination { display: inline-block; }
+
+.pagination a { color: #4c689b; float: left; padding: 8px 16px; text-decoration: none; transition: background-color 0.3s; border-radius: 5px; }
+
+.pagination a.active { background-color: #bdbdbd; color: #494949; }
+
+.pagination a:hover { background-color: #ddd; }
+
+.center-pagination { padding: 15px; text-align: center; }
