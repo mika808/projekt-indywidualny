@@ -7,21 +7,21 @@ var myChart = new Chart(ctx, {
       {
         label: "Signups",
         data: [52, 50, 40, 95, 75, 5, 70, 10, 20, 88],
-        backgroundColor: "DarkTurquoise",
+        backgroundColor: '#8DBEC8',//"DarkTurquoise"
         borderColor: "black",
         borderWidth: 1
       },
       {
         label: "FTD",
         data: [5, 70, 1, 5, 48, 10, 50, 44, 63, 77],
-        backgroundColor: "orange",
+        backgroundColor: '#F29E4E', //"orange",
         borderColor: "black",
         borderWidth: 1
       },
       {
         label: "Earned",
         data: [60, 50, 65, 90, 66, 40, 15, 34, 40, 30],
-        backgroundColor: "blue",
+        backgroundColor:   '#71B374,//"blue",
         borderColor: "black",
         borderWidth: 1,
         hidden: true

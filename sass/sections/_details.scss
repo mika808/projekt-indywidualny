@@ -3,7 +3,7 @@
   width: 100%;
   overflow-x: auto;
 
-  .detail-statistic-table {
+  .detail-statistic-table, .payout-history-table {
     border-collapse: collapse;
     width: 100%;
     max-width: 100%;
@@ -75,7 +75,7 @@
     color: rgb(73, 73, 73);
   }
 
-  a:hover:not(.active, .pagination-arrow) {
+  a:hover:not(.pagination-arrow) {
     background-color: #ddd;
   }
 }
