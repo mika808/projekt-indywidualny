@@ -1,12 +1,17 @@
+.first-table-link {
+    border-top: 1px $main-font-color solid;
+}
+
+
+
 .table-link {
     margin: auto 5vw;
     padding: 20px;
     height: 60px;
-  
     border-bottom: 1px $main-font-color solid;
-    border-top: 1px $main-font-color solid;
-    margin-top: -1px;
-  
+    
+   
+    
     div:first-child {
       color: $main-font-color;
       font-weight: bold;
