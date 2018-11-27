@@ -1,3 +1,4 @@
+"use strict";
 var iconHam = document.querySelector(".icon-hamburger");
 
 function showMenu() {
@@ -14,29 +15,49 @@ iconHam.addEventListener("click", showMenu);
 
 // -M-O-D-A-L-E-
 
-document.getElementById("show-exit-btn1").addEventListener("click", function(e) {
-    e.preventDefault();
-    var idModal = this.dataset.target;
+document.querySelectorAll(".show-modal").forEach(
+    function(element){
+        element.addEventListener(
+            "click", function(e){
+                e.preventDefault();
+                showModal(this);
+            }
+        )
+    }
+)
+
+function showModal(elem) {
+    var idModal= elem.dataset.target;
     document.getElementById(idModal).style.display = "flex";
-  });
-  
-  document.getElementById("show-exit-btn2").addEventListener("click", function(e) {
-    e.preventDefault();
-    var idModal = this.dataset.target;
-    document.getElementById(idModal).style.display = "flex";
-  });
+}
 
-  document.getElementById("cancelBtn").addEventListener("click", function() {
-    var idModal = this.dataset.target;
-    document.getElementById(idModal).style.display = "none";
-  });
 
-  document.getElementById("quitBtn").addEventListener("click", function() {
-    var idModal = this.dataset.target;
-    document.getElementById(idModal).style.display = "none";
-  });
+document.querySelectorAll(".close-modal").forEach(
+    function(element){
+        element.addEventListener(
+            "click", function(e){
+                e.preventDefault();
+                closeModal(this);
+            }
+        )
+    }
+)
 
-  document.getElementById("enterBtn").addEventListener("click", function() {
-    var idModal = this.dataset.target;
+function closeModal(elem) {
+    var idModal= elem.dataset.target;
     document.getElementById(idModal).style.display = "none";
-  });
+}
+
+
+document.addEventListener(
+    'keyup', function(e){
+        if(e.keyCode === 27){
+            document.querySelectorAll(".modal").forEach(
+                function(element){
+                    element.style.display = "none";
+                }
+            )
+        }
+    }
+)
+

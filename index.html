@@ -23,13 +23,26 @@
       style="display: none;"
     >
       <defs>
-          <g id="icon-password">
-              <path d="M21.1,7.4l-2.6-2.6l-2,2L14.7,5h-2.1c-1-2.8-3.8-4.4-6.8-3.9C3.5,1.5,1.6,3.4,1.1,5.7c-0.4,1.8,0.1,3.7,1.2,5.1
+        <g id="icon-close">
+          <polygon
+            points="12.4,1.4 11.6,0.6 6.5,5.8 1.4,0.6 0.6,1.4 5.8,6.5 0.6,11.6 1.4,12.4 6.5,7.2 11.6,12.4 12.4,11.6 7.2,6.5 "
+          />
+        </g>
+        <g id="icon-message">
+          <path
+            d="M16,15.7L13.3,13H7.5C3.9,13,1,10.1,1,6.5S3.9,0,7.5,0h2C13.1,0,16,2.9,16,6.5V15.7z M7.5,1C4.5,1,2,3.5,2,6.5
+	            c0,3,2.5,5.5,5.5,5.5h6.2l1.3,1.3V6.5c0-3-2.5-5.5-5.5-5.5H7.5z"
+          />
+        </g>
+        <g id="icon-password">
+          <path
+            d="M21.1,7.4l-2.6-2.6l-2,2L14.7,5h-2.1c-1-2.8-3.8-4.4-6.8-3.9C3.5,1.5,1.6,3.4,1.1,5.7c-0.4,1.8,0.1,3.7,1.2,5.1
               C3.5,12.2,5.2,13,7,13c2.2,0,4.1-1.1,5.2-3h7.9c0.6,0,1.1-0.4,1.4-0.9C21.7,8.5,21.6,7.9,21.1,7.4z M20.5,8.7c0,0.1-0.2,0.3-0.5,0.3
               h-8.5l-0.1,0.3C10.6,11,8.9,12,7,12c-1.5,0-2.9-0.7-3.9-1.8c-1-1.2-1.3-2.7-1-4.2C2.5,4,4.1,2.5,6,2.1C6.4,2,6.7,2,7,2
               c2.2,0,4.2,1.4,4.8,3.6L11.9,6h2.4l2.2,2.2l2-2l1.9,1.9C20.7,8.4,20.6,8.6,20.5,8.7z M5.5,4.5C4.1,4.5,3,5.6,3,7s1.1,2.5,2.5,2.5
-              S8,8.4,8,7S6.9,4.5,5.5,4.5z M5.5,8.5C4.7,8.5,4,7.8,4,7s0.7-1.5,1.5-1.5S7,6.2,7,7S6.3,8.5,5.5,8.5z"/>
-            </g>
+              S8,8.4,8,7S6.9,4.5,5.5,4.5z M5.5,8.5C4.7,8.5,4,7.8,4,7s0.7-1.5,1.5-1.5S7,6.2,7,7S6.3,8.5,5.5,8.5z"
+          />
+        </g>
         <g id="icon-login">
           <path
             d="M7.5,9c2.2,0,4-1.8,4-4c0-2.2-1.8-4-4-4s-4,1.8-4,4C3.5,7.2,5.3,9,7.5,9z M7.5,2c1.7,0,3,1.3,3,3s-1.3,3-3,3s-3-1.3-3-3
@@ -189,7 +202,7 @@
       <section class="part2Sidebar">
         <hr />
         <!-- PEOPLE -->
-        <div class="people">
+        <div class="people show-modal" data-target="chat-modal">
           <h2>YOUR MANAGER</h2>
 
           <img src="images/manager.jpeg" alt="manager" />
@@ -272,7 +285,7 @@
 
         <!-- __________________ -->
         <li>
-          <a href="#" id="show-exit-btn2" data-target="login-modal">
+          <a href="#" class="show-modal" data-target="login-modal">
             <svg viewBox="0 0 24 24">
               <use xlink:href="#icon-profile"></use>
             </svg>
@@ -281,7 +294,7 @@
         </li>
         <!-- __________________ -->
         <li>
-          <a href="#" id="show-exit-btn1" data-target="exit-modal">
+          <a href="#" class="show-modal" data-target="exit-modal">
             <svg viewBox="0 0 24 24"><use xlink:href="#icon-quit"></use></svg>
           </a>
         </li>
@@ -292,6 +305,7 @@
       <!-- GENERAL STATISTIC -->
       <section id="general" class="displayBox">
         <h1>GENERAL STATISTIC</h1>
+      
         <div class="calendar">
           <input type="date" /> <input type="date" />
           <button class="btn btn-refresh">
@@ -1054,10 +1068,63 @@
         </div>
       </section>
 
+
+
+
       <!-- END CONTAINER -->
     </div>
 
     <!-- --  M O D A L S -- -->
+    <!-- MODAL chat -->
+    <div class="modal modal-chat" id="chat-modal" style="display: none">
+      <div class="modal-inner">
+        <!-- modal header -->
+        <div class="modal-header">
+          <span id="online-chat-close" class= "close-modal" data-target="chat-modal" >
+            <svg viewBox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+          </span>
+
+          <h1>ONLINE CHAT WITH YOUR PERSONAL MANAGER</h1>
+          <!-- separator-line -->
+          <div class="separator-line"></div>
+        </div>
+        <!-- modal body -->
+        <div class="modal-body">
+          <div class="person">
+            <img src="images/MikhaelE.png" alt="manager" />
+            <div class="person-details">
+              <span class="nameManager">Mikhael E.</span>
+              <span class="conection-status online">online</span>
+              <span class="conection-status offline">offline</span>
+            </div>
+          </div>
+          <!-- separator-line -->
+          <div class="separator-line"></div>
+          <div class="chat-history">
+            <ul>
+              <li class="manager-message  message">Hello. Can I help you?</li>
+              <li class="your-message message">
+                Hello! I would like to know about Postback.
+              </li>
+              <li class="manager-message message">Ok. 5 min...</li>
+            </ul>
+          </div>
+        </div>
+        <!-- modal footer -->
+        <div class="modal-footer">
+          <form>
+            <svg viewBox="0 0 20 24">
+              <use xlink:href="#icon-message"></use>
+            </svg>
+            <input type="text" name="message" placeholder="Enter message ..." />
+            <button id="sendBtn" class="btn btn-send">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <!-- MODAL cancel/quit -->
     <div class="modal modal-exit" id="exit-modal" style="display: none">
       <div class="modal-inner">
@@ -1068,12 +1135,12 @@
           <div class="modal-footer">
             <button
               id="cancelBtn"
-              class="btn btn-cancel"
+              class="btn btn-cancel close-modal"
               data-target="exit-modal"
             >
               Cancel
             </button>
-            <button id="quitBtn" class="btn btn-quit" data-target="exit-modal">
+            <button id="quitBtn" class="btn btn-quit close-modal" data-target="exit-modal">
               Quit
             </button>
           </div>
@@ -1095,12 +1162,16 @@
               </svg>
               <input type="text" name="loginName" placeholder="login name" />
               <svg viewBox="0 0 24 24">
-                  <use xlink:href="#icon-password"></use>
-                </svg>
-                <input type="text" name="loginPassword" placeholder="password" />
+                <use xlink:href="#icon-password"></use>
+              </svg>
+              <input
+                type="password"
+                name="loginPassword"
+                placeholder="password"
+              />
               <button
                 id="enterBtn"
-                class="btn btn-enter"
+                class="btn btn-enter close-modal"
                 data-target="login-modal"
               >
                 Enter
