@@ -1,69 +1,64 @@
 .first-table-link {
-    border-top: 1px $main-font-color solid;
+  border-top: 1px $main-font-color solid;
 }
 
-
-
 .table-link {
-    margin: auto 5vw;
-    padding: 20px;
-    height: 60px;
-    border-bottom: 1px $main-font-color solid;
-    
-   
-    
-    div:first-child {
+  margin: auto 5vw;
+  padding: 20px;
+  height: 60px;
+  border-bottom: 1px $main-font-color solid;
+
+  div:first-child {
+    color: $main-font-color;
+    font-weight: bold;
+  }
+
+  div:nth-child(2) {
+    a {
+      color: #6189a5;
+    }
+  }
+
+  .tableSvg {
+    display: none;
+    text-align: right;
+
+    svg:first-child {
+      color: #f58323;
+    }
+
+    svg:nth-child(2) {
       color: $main-font-color;
-      font-weight: bold;
     }
-  
-    div:nth-child(2) {
-      a {
-        color: #6189a5;
-      }
-    }
-  
+  }
+
+  &:hover {
+    background-color: #f1f3f3;
+    cursor: pointer;
     .tableSvg {
-      display: none;
-      text-align: right;
-  
-      svg:first-child {
-        color: #f58323;
-      }
-  
-      svg:nth-child(2) {
-        color: $main-font-color;
-      }
-    }
-  
-    &:hover {
-      background-color: #f1f3f3;
-      cursor: pointer;
-      .tableSvg {
-        display: block;
-        
-      }
+      display: block;
     }
   }
-  
-  @media (max-width: 992px) {
-    .table-link {
-      margin: auto 0;
-      margin-top: -1px;
-    }
+}
+
+@media (max-width: 992px) {
+  .table-link {
+    margin: auto 0;
+    margin-top: -1px;
   }
-  
-  @media (max-width: 768px) {
-    .table-link {
-      height: 120px;
+}
+
+@media (max-width: 768px) {
+  .table-link {
+    height: 120px;
+    text-align: center;
+
+    div:nth-child(2) {
+      padding: 10px 0;
+    }
+
+    .tableSvg {
       text-align: center;
-  
-      div:nth-child(2) {
-        padding: 10px 0;
-      }
-  
-      .tableSvg {
-        text-align: center;
-      }
     }
   }
+}

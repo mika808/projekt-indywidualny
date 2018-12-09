@@ -1,16 +1,16 @@
-  .financialSection {
-    color: $main-font-color;
-    max-width: 800px;
-    margin: 30px auto;
+.financialSection {
+  color: $main-font-color;
+  max-width: 800px;
+  margin: 30px auto;
 
-    .financialData {
-      padding: 7px 0px;
-      border-bottom: 1px $main-font-color solid;
-      margin: 0 15px;
+  .financialData {
+    padding: 7px 0px;
+    border-bottom: 1px $main-font-color solid;
+    margin: 0 15px;
 
-      span:nth-child(2) {
-        float: right;
-        color: black;
-      }
+    span:nth-child(2) {
+      float: right;
+      color: black;
     }
   }
+}

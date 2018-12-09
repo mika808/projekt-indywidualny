@@ -23,6 +23,11 @@
       style="display: none;"
     >
       <defs>
+        <g id="icon-show">
+          <path
+            d="M12,12H1V1h3V0H0v13h13V9h-1V12z M7,0v1h4.3L4.1,8.1l0.7,0.7L12,1.7V6h1V0H7z"
+          />
+        </g>
         <g id="icon-close">
           <polygon
             points="12.4,1.4 11.6,0.6 6.5,5.8 1.4,0.6 0.6,1.4 5.8,6.5 0.6,11.6 1.4,12.4 6.5,7.2 11.6,12.4 12.4,11.6 7.2,6.5 "
@@ -48,6 +53,9 @@
             d="M7.5,9c2.2,0,4-1.8,4-4c0-2.2-1.8-4-4-4s-4,1.8-4,4C3.5,7.2,5.3,9,7.5,9z M7.5,2c1.7,0,3,1.3,3,3s-1.3,3-3,3s-3-1.3-3-3
               S5.8,2,7.5,2z M7.5,10c-3,0-5.6,2-6.3,4.9l1,0.3C2.8,12.7,5,11,7.5,11c2.5,0,4.7,1.7,5.3,4.1l1-0.3C13.1,12,10.5,10,7.5,10z"
           />
+        </g>
+        <g id="icon-arrowDownSmall">
+          <polygon points="3.5,4.2 0.1,0.9 0.9,0.1 3.5,2.8 6.1,0.1 6.9,0.9 " />
         </g>
         <g id="icon-arrowRight">
           <polygon points="1.6,16.9 0.9,16.1 8.6,8.5 0.9,0.9 1.6,0.1 10,8.5 " />
@@ -305,7 +313,7 @@
       <!-- GENERAL STATISTIC -->
       <section id="general" class="displayBox">
         <h1>GENERAL STATISTIC</h1>
-      
+
         <div class="calendar">
           <input type="date" /> <input type="date" />
           <button class="btn btn-refresh">
@@ -1068,8 +1076,152 @@
         </div>
       </section>
 
+      <!-- POSTBACK -->
+      <section id="postback" class="displayBox postback">
+        <h1>NEW POSTBACK</h1>
+        <p>You can insert some parameters in this postback:</p>
+        <!-- FORM SIGNUP -->
+        <form>
+          <!-- 1 -->
+          <div class="row form-postback">
+            <!-- 1a -->
+            <div class=" col col-6 col-sm-12 ">
+              <label for="signup" class="form-label postback-label"
+                >Signup</label
+              >
+              <textarea rows="6" cols="60" name="signup" id="signup">
+crm_userld=%user_id%
+subid=%p%   
+              </textarea>
+            </div>
+            <!-- 1b -->
+            <div class=" col col-6 col-sm-12">
+              <label for="deposit" class="form-label postback-label"
+                >Deposit</label
+              >
+              <textarea rows="6" cols="50" name="signup" id="deposit">
+crm_userld=%user_id%
+subid=%p%   
+                </textarea
+              >
+            </div>
+          </div>
 
+          <!-- 2 -->
+          <div class="row form-postback">
+            <!-- 2a -->
+            <div class=" col col-4 col-sm-12">
+              <label for="postback-type" class="form-label postback-label"
+                >Postback type
+              </label>
+              <select name="postback-type" id="postback-type">
+                <option value="S2S">S2S(http://..) </option>
+              
+                <option value="b">bbbb</option>
+                <option value="c">cccc</option>
+              </select>
+            </div>
+            <!-- 2b -->
+            <div class=" col col-4 col-sm-12">
+              <label for="countries" class="form-label postback-label"
+                >To countries</label
+              >
+              <select name="postback-type" id="countries">
+                <option value="0">Select countries:</option>
+                <option value="1">USA</option>
+                <option value="2">PL</option>
+              </select>
+            </div>
+            <!-- 2c -->
+            <div class=" col col-4 col-sm-12">
+              <label for="sending-options" class="form-label postback-label"
+                >Sending options:</label
+              >
+              <select name="sending-options" id="sending-options">
+                <option value="0">Select:</option>
+                <option value="1">wwwwwwww</option>
+                <option value="2">fffffff</option>
+              </select>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="row form-postback row-3-form-postback">
+            <div class=" col col-6 col-sm-12">
+              <h2><span>NOT</span> send statuses</h2>
+              <br />
+              <div class="scrollbar-component">
+                <div class="scrollbar" id="styleScrollbar">
+                  <div class="force-overflow"></div>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >checkNumber
+                    <input
+                      type="checkbox"
+                      checked="checked"
+                      name="checkNumber"
+                    />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >noAnswer <input type="checkbox" name="noAnswer" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >noCall <input type="checkbox" name="noCall" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
 
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >callAgain <input type="checkbox" name="callAgain" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                </div>
+              </div>
+            </div>
+            <div class=" col col-6 col-sm-12">
+              <h2>Send after:</h2>
+              <br />
+              <div class="slider-component">
+                <div class="slider-labels">
+                  <label>0</label> <label>168</label>
+                </div>
+
+                <input
+                  id="send-after-slider"
+                  name="slider"
+                  type="range"
+                  min="0"
+                  max="168"
+                  step="1"
+                  value="104"
+                />
+                <label id="slider-value-label"></label>
+              </div>
+            </div>
+          </div>
+          <div class="row form-postback">
+            <button  class="btn btn-center btn-create-pixel">
+              Create Pixel
+            </button>
+          </div>
+        </form>
+      </section>
 
       <!-- END CONTAINER -->
     </div>
@@ -1080,7 +1232,11 @@
       <div class="modal-inner">
         <!-- modal header -->
         <div class="modal-header">
-          <span id="online-chat-close" class= "close-modal" data-target="chat-modal" >
+          <span
+            id="online-chat-close"
+            class="close-modal"
+            data-target="chat-modal"
+          >
             <svg viewBox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
           </span>
 
@@ -1117,9 +1273,7 @@
               <use xlink:href="#icon-message"></use>
             </svg>
             <input type="text" name="message" placeholder="Enter message ..." />
-            <button id="sendBtn" class="btn btn-send">
-              Send
-            </button>
+            <button id="sendBtn" class="btn btn-send">Send</button>
           </form>
         </div>
       </div>
@@ -1140,7 +1294,11 @@
             >
               Cancel
             </button>
-            <button id="quitBtn" class="btn btn-quit close-modal" data-target="exit-modal">
+            <button
+              id="quitBtn"
+              class="btn btn-quit close-modal"
+              data-target="exit-modal"
+            >
               Quit
             </button>
           </div>

@@ -20,13 +20,13 @@
 @import "components/sidebar";
 @import "components/topNav";
 @import "components/modal";
+@import "components/checkbox";
+@import "components/slider";
+@import "components/scrollbar";
+
 /* Sections */
 @import "sections/generalData";
 @import "sections/links";
 @import "sections/personalData";
 @import "sections/details";
-
-
-
-
-
+@import "sections/postback";
