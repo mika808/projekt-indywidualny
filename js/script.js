@@ -12,7 +12,7 @@ function showMenu() {
 
 iconHam.addEventListener("click", showMenu);
 
-// -M-O-D-A-L-E-
+// -M-O-D-A-L--
 
 document.querySelectorAll(".show-modal").forEach(function(element) {
   element.addEventListener("click", function(e) {
@@ -62,3 +62,23 @@ sendAfterSlider.addEventListener("change", function(evt) {
   var input = evt.target;
   prepareSlider(input);
 });
+
+
+// -FLAG-
+
+const flagChosen = document.querySelector(".flagselect__chosen");
+const flagsList = document.querySelector(".flagselect__flags");
+const flagInput = document.querySelector(".flagselect input");
+
+flagChosen.addEventListener("click", function() {
+  if(flagsList.style.display !== "block") flagsList.style.display = "block";
+  else flagsList.style.display = "none";
+})
+
+flagsList.addEventListener("click", function(e) {
+  var elem;
+  if(e.target.tagName === "IMG") elem = e.target.parentNode
+  else elem = e.target
+  flagChosen.innerHTML = elem.innerHTML
+  flagInput.value = elem.dataset.index
+})

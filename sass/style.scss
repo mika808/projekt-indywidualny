@@ -32,3 +32,50 @@
 @import "sections/details";
 @import "sections/postback";
 
+
+
+.flagselect {
+  width: 100%;  
+  font-size: 14px;
+  color: #000;
+   
+}
+
+.flagselect img {
+  height: 25px;
+  width: auto;
+  margin: 0 5px;
+}
+
+.flagselect__chosen {
+  border: 1px solid #888;
+  padding: 0px 0px 4px 5px;
+  margin-top: 10px;
+  
+ 
+}
+
+.flagselect__flags {
+  list-style-type: none;
+  border: 1px solid #888;
+  display: none;
+  position: absolute;
+  width: 108px;
+  
+}
+
+.flagselect__flags li {
+  border-bottom: 1px solid #888;
+  background-color: #fff;
+
+}
+
+.flagselect__flags li a {
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  color: #000;
+}
