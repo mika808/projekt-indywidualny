@@ -21,7 +21,7 @@ var myChart = new Chart(ctx, {
       {
         label: "Earned",
         data: [60, 50, 65, 90, 66, 40, 15, 34, 40, 30],
-        backgroundColor:   '#71B374,//"blue",
+        backgroundColor:   '#71B374', //"blue",
         borderColor: "black",
         borderWidth: 1,
         hidden: true

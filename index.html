@@ -345,7 +345,7 @@
         </div>
 
         <div id="chart">
-          <!-- <canvas id="myChart" width="500" height="400"></canvas> -->
+          <canvas id="myChart" width="500" height="400"></canvas>
         </div>
       </section>
 
@@ -645,7 +645,9 @@
           </div>
         </div>
 
-        <button class="btn btn-center">+ add new</button>
+        <button class="btn btn-center show-modal" data-target="banners-modal">
+          + add new
+        </button>
       </section>
 
       <!-- PERSONAL DATA -->
@@ -1116,7 +1118,6 @@ subid=%p%
               </label>
               <select name="postback-type" id="postback-type">
                 <option value="S2S">S2S(http://..) </option>
-              
                 <option value="b">bbbb</option>
                 <option value="c">cccc</option>
               </select>
@@ -1216,7 +1217,7 @@ subid=%p%
             </div>
           </div>
           <div class="row form-postback">
-            <button  class="btn btn-center btn-create-pixel">
+            <button class="btn btn-center btn-create-pixel">
               Create Pixel
             </button>
           </div>
@@ -1227,6 +1228,280 @@ subid=%p%
     </div>
 
     <!-- --  M O D A L S -- -->
+    <!-- MODAL banners -->
+    <div class="modal modal-banners" id="banners-modal" style="display: none">
+      <div class="modal-inner">
+        <!-- modal header -->
+        <div class="modal-header">
+          <span class="close-modal" data-target="banners-modal">
+            <svg viewBox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+          </span>
+          <h1>ADD BANNERS</h1>
+
+          <!-- separator-line -->
+          <div class="separator-line"></div>
+        </div>
+        <div class="modal-body">
+          <div class="row row-compain">
+            <!-- ----- 1a --------- -->
+            <div class=" col col-5 col-sm-12">
+              <label for="scheme-name" class="form-label banners-label"
+                >Scheme name
+              </label>
+              <select name="scheme-name" id="scheme-name">
+                <option value="a">Name </option>
+                <option value="b">bbbb</option>
+                <option value="c">cccc</option>
+              </select>
+            </div>
+            <!-- ------ 2a -------- -->
+            <div class=" col col-5 col-sm-12">
+              <label for="compain" class="form-label banners-label">
+                Compain
+              </label>
+              <select name="compain" id="compain">
+                <option value="a">Select </option>
+                <option value="b">bbbb</option>
+                <option value="c">cccc</option>
+              </select>
+            </div>
+            <!-- ------ 3a -------- -->
+            <div class=" col col-2 col-sm-12">
+              <label for="language" class="form-label banners-label"
+                >Language
+              </label>
+              <select name="language" id="language">
+                <option value="a">Select </option>
+                <option value="b">bbbb</option>
+                <option value="c">cccc</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row row-compain">
+            <!-- ----- 1b --------- -->
+            <div class=" col col-4 col-sm-12">
+              <label for="weight-height" class="form-label banners-label"
+                >Weight-Height
+              </label>
+              <select name="weight-height" id="weight-height">
+                <option value="a">Select</option>
+                <option value="b">bbbb</option>
+                <option value="c">cccc</option>
+              </select>
+            </div>
+            <!-- ------ 2b -------- -->
+            <div class=" col col-4 col-sm-12">
+              <label for="design" class="form-label banners-label">
+                Design
+              </label>
+              <select name="design" id="design">
+                <option value="a">Select </option>
+                <option value="b">bbbb</option>
+                <option value="c">cccc</option>
+              </select>
+            </div>
+            <!-- ------ 3b -------- -->
+            <div class=" col col-4 col-sm-12">
+              <label for="file-type" class="form-label banners-label"
+                >File type
+              </label>
+              <select name="file-type" id="file-type">
+                <option value="a">All </option>
+                <option value="b">bbbb</option>
+                <option value="c">cccc</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row row-select-banners-websites">
+            <div class=" col col-6 col-sm-12">
+              <h1>Select banners</h1>
+              <br />
+              <div class="scrollbar-component">
+                <div class="scrollbar">
+                  <div class="force-overflow"></div>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Banner main
+                    <input
+                      type="checkbox"
+                      checked="checked"
+                      name="bannerMain"
+                    />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Sign up banner
+                    <input type="checkbox" name="signUpBanner" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Left banner <input type="checkbox" name="leftBanner" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Right banner <input type="checkbox" name="rightBanner" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Bottom banner
+                    <input type="checkbox" name="bottomBanner" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Long banner
+                    <input
+                      type="checkbox"
+                      name="longBanner"
+                      checked="checked"
+                    />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Personal cabinet banner
+                    <input
+                      checked="checked"
+                      type="checkbox"
+                      name="personalCabinetBanner"
+                    />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Popup banner <input type="checkbox" name="popupBanner" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                </div>
+              </div>
+            </div>
+            <div class=" col col-6 col-sm-12">
+              <h1>Select websites</h1>
+              <br />
+              <div class="scrollbar-component">
+                <div class="scrollbar">
+                  <div class="force-overflow"></div>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Landing page Money
+                    <input type="checkbox" name="landingPageMoney" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >LP Your choise
+                    <input type="checkbox" name="LPYourChoise" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >LP Wallet<input type="checkbox" name="LPWallet" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >E-Shop 01<input type="checkbox" name="E-Shop01" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Toy Store
+                    <input type="checkbox" name="toyStore" checked="checked" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Book Store<input type="checkbox" name="bookStore" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Charity<input type="checkbox" name="charity" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >LP Icons Store<input type="checkbox" name="LPIconsStore" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- modal footer -->
+        <div class="modal-footer">
+          <form>
+            <input type="text" name="message" placeholder="Generated link" />
+            
+            <button id="copyLinkBtn" class="btn btn-copy-link">
+                <svg viewBox="0 0 24 16"><use xlink:href="#icon-links"></use></svg>
+                Copy link
+            </button>
+            <button id="SaveBtn" class="btn btn-save">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <!-- MODAL chat -->
     <div class="modal modal-chat" id="chat-modal" style="display: none">
       <div class="modal-inner">
