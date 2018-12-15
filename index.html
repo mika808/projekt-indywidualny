@@ -529,7 +529,7 @@
       <!-- BANNERS -->
       <section id="banners" class="displayBox">
         <h1>BANNERS</h1>
-        <button class="btn btn-center">+ add new</button>
+        <button class="btn btn-center show-modal" data-target="banners-modal">+ add new</button>
         <!-- 1 -->
         <div class="row table-link">
           <div class="col col-4 col-sm-12">Banner main</div>
@@ -1212,7 +1212,7 @@ subid=%p%
                   step="1"
                   value="104"
                 />
-                <label id="slider-value-label"></label>
+                <label class= "slider-value-label" id="slider-value-label"></label>
               </div>
             </div>
           </div>
@@ -1267,19 +1267,38 @@ subid=%p%
             </div>
             <!-- ------ 3a -------- -->
             <div class=" col col-2 col-sm-12">
-              <label for="language" class="form-label banners-label"
+              <label class="form-label banners-label"
                 >Language
               </label>
               <div class="flagselect">
-  <input type="hidden" value="EN">
-  <div class="flagselect__chosen"><img src="images/flag/Flag_Nation_kingdom_.png" alt="EN"> EN</div>
-  <ul class="flagselect__flags">
-    <li><a data-index="EN" href="#"><img src="images/flag/Flag_Nation_kingdom_.png" alt="EN">EN</a></li>
-    <li><a data-index="PL" href="#"><img src="images/flag/Flag_Nation_poland_.png" alt="PL">PL</a></li>
-    <li><a data-index="DE" href="#"><img src="images/flag/Germany_flag_.png" alt="DE">DE</a></li>
-  </ul>  
-</div>
-
+                <input type="hidden" value="EN" />
+                <div class="flagselect__chosen">
+                  <img src="images/flag/Flag_Nation_kingdom_.png" alt="EN" /> EN
+                </div>
+                <ul class="flagselect__flags">
+                  <li>
+                    <a data-index="EN" href="#"
+                      ><img
+                        src="images/flag/Flag_Nation_kingdom_.png"
+                        alt="EN"
+                      />EN</a
+                    >
+                  </li>
+                  <li>
+                    <a data-index="PL" href="#"
+                      ><img
+                        src="images/flag/Flag_Nation_poland_.png"
+                        alt="PL"
+                      />PL</a
+                    >
+                  </li>
+                  <li>
+                    <a data-index="DE" href="#"
+                      ><img src="images/flag/Germany_flag_.png" alt="DE" />DE</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -1496,10 +1515,12 @@ subid=%p%
         <div class="modal-footer">
           <form>
             <input type="text" name="message" placeholder="Generated link" />
-            
+
             <button id="copyLinkBtn" class="btn btn-copy-link">
-                <svg viewBox="0 0 24 16"><use xlink:href="#icon-links"></use></svg>
-                Copy link
+              <svg viewBox="0 0 24 16">
+                <use xlink:href="#icon-links"></use>
+              </svg>
+              Copy link
             </button>
             <button id="SaveBtn" class="btn btn-save">Save</button>
           </form>

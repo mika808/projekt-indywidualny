@@ -1,13 +1,37 @@
 .slider-component {
   margin: 2em 0;
-  text-align: center;
+  //text-align: center;
+  position: relative;
 
-  #slider-value-label {
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 10px;
+    background: #fff;
+    position: absolute;
+    top: 20px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 10px;
+    background: #fff;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+  }
+
+  .slider-value-label {
+    display: block;
+    width: fit-content;
     padding: 3px;
-    font-size: 14px;
+    font-size: 12px;
+    margin-left: calc(var(--value) * 0.75%);
   }
   .slider-labels {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     font-size: 14px;
@@ -34,7 +58,6 @@
     width: 0;
     height: 0;
     position: relative;
-
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 15px solid $orange-content-color;

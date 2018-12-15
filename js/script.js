@@ -54,6 +54,7 @@ function prepareSlider(input) {
   var unit = (inputMax - inputMin) / 100;
   var percent = (input.value - inputMin) / unit;
   input.style.setProperty("--value", percent);
+  label.style.setProperty("--value", percent);  
 }
 
 var sendAfterSlider = document.getElementById("send-after-slider");
@@ -81,4 +82,5 @@ flagsList.addEventListener("click", function(e) {
   else elem = e.target
   flagChosen.innerHTML = elem.innerHTML
   flagInput.value = elem.dataset.index
+  flagsList.style.display = "none";
 })
