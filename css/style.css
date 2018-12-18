@@ -200,6 +200,18 @@ body { background-color: #b8b8b8; }
 
 .btn-center { text-align: center; display: block; margin: 20px auto; padding: 5px 30px; }
 
+.flagselect { width: 100%; font-size: 14px; color: #000; }
+
+.flagselect img { max-width: 24px; height: auto; margin: 0 5px; }
+
+.flagselect__chosen { border: 1px solid #888; padding: 6px 10px; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox= "0 0 7 5" style="enable-background:new 0 0 7 5;" xml:space="preserve" fill="#a6a6a6"><polygon points="3.5,4.2 0.1,0.9 0.9,0.1 3.5,2.8 6.1,0.1 6.9,0.9" /></svg>'); background-repeat: no-repeat; background-position: right 10px center; background-size: 12px; }
+
+.flagselect__flags { list-style-type: none; border: 1px solid #888; display: none; position: absolute; width: 108px; z-index: 999; background-color: #fff; }
+
+.flagselect__flags li { border-bottom: 1px solid #888; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; }
+
+.flagselect__flags li a { text-decoration: none; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; padding: 6px 10px; width: 100%; height: 100%; font-size: 14px; color: #000; }
+
 .form-label { color: #a6a6a6; font-weight: bold; text-align: left; display: inline-block; margin: 10px 0px; }
 
 svg { width: 24px; height: 24px; fill: currentColor; vertical-align: text-top; margin-left: 10px; }
@@ -269,6 +281,48 @@ nav li:hover { background-color: black; }
   .top-nav { display: none; } }
 
 .modal { background: rgba(0, 0, 0, 0.7); position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; z-index: 999; }
+
+.modal-url .modal-inner { background: #fff; max-width: 800px; width: 100%; }
+
+.modal-url .modal-inner h1 { font-size: 15px; color: #a6a6a6; margin-top: 20px; }
+
+.modal-url .modal-inner .separator-line { margin: 0; }
+
+.modal-url .modal-inner .modal-body { margin: 16px; }
+
+.modal-url select { width: 100%; margin: 0px; padding: 4px; -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; font-size: 14px; display: block; background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox= "0 0 7 5" style="enable-background:new 0 0 7 5;" xml:space="preserve" fill="#a6a6a6"><polygon points="3.5,4.2 0.1,0.9 0.9,0.1 3.5,2.8 6.1,0.1 6.9,0.9" /></svg>'); background-repeat: no-repeat; background-position: right 10px center; background-size: 12px; }
+
+.modal-url .col { padding: 10px; }
+
+.modal-url span { float: right; }
+
+.modal-url .row-select-url-websites { padding: 0 14px; margin: 0 -14px; margin-top: 16px; border-top: 1px solid #dadada; border-bottom: 1px solid #dadada; }
+
+.modal-url .row-select-url-websites .scrollbar-component .scrollbar { height: 300px; margin: 20px 0px; }
+
+.modal-url .row-select-url-websites .scrollbar-component .scrollbar .force-overflow { margin: 0px; }
+
+.modal-url .modal-footer { margin-bottom: 15px; }
+
+.modal-url .modal-footer .btn { padding: 5px 0px; text-align: center; font-size: 14px; font-weight: 100; margin-left: 8px; }
+
+.modal-url .modal-footer .btn-copy-link { padding-right: 14px; width: 120px; background-color: #b6b6b6; }
+
+.modal-url .modal-footer .btn-save { width: 100px; }
+
+.modal-url .modal-footer form { display: inline-block; margin: 5px 15px; }
+
+.modal-url .modal-footer form input[type="text"] { padding: 3px 6px; text-align: left; width: 500px; border-radius: 4px; font-size: 14px; }
+
+.modal-url .modal-footer form svg { position: relative; }
+
+.modal-url .modal-inner { background: #fff; max-width: 800px; width: 100%; }
+
+.modal-url .modal-inner h1 { font-size: 15px; color: #a6a6a6; margin-left: 10px; }
+
+.modal-url .modal-inner .separator-line { margin: 0; }
+
+.modal-url .modal-inner .modal-body { margin: 16px; }
 
 .modal-banners .modal-inner { background: #fff; max-width: 800px; width: 100%; }
 
@@ -479,7 +533,7 @@ nav li:hover { background-color: black; }
 
 @media (max-width: 768px) { .table-link { height: 120px; text-align: center; }
   .table-link div:nth-child(2) { padding: 10px 0; }
-  .table-link .tableSvg { text-align: center; } }
+  .table-link .tableSvg { text-align: center; display: block; } }
 
 form .form-personal-data { margin: 10px 10vw; }
 
@@ -536,15 +590,3 @@ form .form-personal-data input[type="text"]:focus, form .form-personal-data inpu
 .postback .form-postback h2 { color: #999; font-size: 16px; }
 
 .postback .form-postback h2 span { color: red; font-weight: bolder; }
-
-.flagselect { width: 100%; font-size: 14px; color: #000; }
-
-.flagselect img { max-width: 24px; height: auto; margin: 0 5px; }
-
-.flagselect__chosen { border: 1px solid #888; padding: 6px 10px; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox= "0 0 7 5" style="enable-background:new 0 0 7 5;" xml:space="preserve" fill="#a6a6a6"><polygon points="3.5,4.2 0.1,0.9 0.9,0.1 3.5,2.8 6.1,0.1 6.9,0.9" /></svg>'); background-repeat: no-repeat; background-position: right 10px center; background-size: 12px; }
-
-.flagselect__flags { list-style-type: none; border: 1px solid #888; display: none; position: absolute; width: 108px; }
-
-.flagselect__flags li { border-bottom: 1px solid #888; background-color: #fff; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; }
-
-.flagselect__flags li a { text-decoration: none; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; padding: 6px 10px; width: 100%; height: 100%; font-size: 14px; color: #000; }

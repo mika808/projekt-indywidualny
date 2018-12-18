@@ -352,7 +352,7 @@
       <!-- LINKS -->
       <section id="links" class="displayBox">
         <h1>LINKS</h1>
-        <button class="btn btn-center">+ add new</button>
+        <button class="btn btn-center show-modal" data-target="url-modal">+ add new</button>
         <!-- 1 -->
         <div class="row table-link first-table-link">
           <div class="col col-4 col-sm-12">Home page</div>
@@ -523,13 +523,17 @@
             </div>
           </div>
         </div>
-        <button class="btn btn-center">+ add new</button>
+        <button class="btn btn-center show-modal" data-target="url-modal">
+          + add new
+        </button>
       </section>
 
       <!-- BANNERS -->
       <section id="banners" class="displayBox">
         <h1>BANNERS</h1>
-        <button class="btn btn-center show-modal" data-target="banners-modal">+ add new</button>
+        <button class="btn btn-center show-modal" data-target="banners-modal">
+          + add new
+        </button>
         <!-- 1 -->
         <div class="row table-link">
           <div class="col col-4 col-sm-12">Banner main</div>
@@ -1212,7 +1216,10 @@ subid=%p%
                   step="1"
                   value="104"
                 />
-                <label class= "slider-value-label" id="slider-value-label"></label>
+                <label
+                  class="slider-value-label"
+                  id="slider-value-label"
+                ></label>
               </div>
             </div>
           </div>
@@ -1228,16 +1235,15 @@ subid=%p%
     </div>
 
     <!-- --  M O D A L S -- -->
-    <!-- MODAL banners -->
-    <div class="modal modal-banners" id="banners-modal" style="display: none">
+    <!-- MODAL ADD-URL -->
+    <div class="modal modal-url" id="url-modal" style="display: none">
       <div class="modal-inner">
         <!-- modal header -->
         <div class="modal-header">
-          <span class="close-modal" data-target="banners-modal">
+          <span class="close-modal" data-target="url-modal">
             <svg viewBox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
           </span>
-          <h1>ADD BANNERS</h1>
-
+          <h1>ADD URL</h1>
           <!-- separator-line -->
           <div class="separator-line"></div>
         </div>
@@ -1245,7 +1251,7 @@ subid=%p%
           <div class="row row-compain">
             <!-- ----- 1a --------- -->
             <div class=" col col-5 col-sm-12">
-              <label for="scheme-name" class="form-label banners-label"
+              <label for="scheme-name" class="form-label url-label"
                 >Scheme name
               </label>
               <select name="scheme-name" id="scheme-name">
@@ -1256,7 +1262,7 @@ subid=%p%
             </div>
             <!-- ------ 2a -------- -->
             <div class=" col col-5 col-sm-12">
-              <label for="compain" class="form-label banners-label">
+              <label for="compain" class="form-label url-label">
                 Compain
               </label>
               <select name="compain" id="compain">
@@ -1267,9 +1273,7 @@ subid=%p%
             </div>
             <!-- ------ 3a -------- -->
             <div class=" col col-2 col-sm-12">
-              <label class="form-label banners-label"
-                >Language
-              </label>
+              <label class="form-label url-label">Language </label>
               <div class="flagselect">
                 <input type="hidden" value="EN" />
                 <div class="flagselect__chosen">
@@ -1300,6 +1304,390 @@ subid=%p%
                 </ul>
               </div>
             </div>
+          </div>
+
+          <div class="row row-select-url-websites">
+              <h1>Select websites</h1>
+            <div class="scrollbar-component">
+              <div class="scrollbar">
+                <div class="force-overflow"></div>
+                <!---->
+                <div class=" col col-4 col-sm-12">
+
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Landing page Money
+                    <input type="checkbox" name="Landing-Page-Money" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >LP Your choise
+                    <input type="checkbox" name="LP-Your-Choise" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >LP Wallet <input type="checkbox" name="LP-Wallet" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >E-Shop 01 <input type="checkbox" name=">E-Shop-01" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Toy Store
+                    <input type="checkbox" name="Toy-Store" checked="checked" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Book Store <input type="checkbox" name="Book-Store" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Charity <input type="checkbox" name="Charity" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >LP Icons Store
+                    <input type="checkbox" name="LP-Icons-Store" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Templates Store<input
+                      type="checkbox"
+                      name="Templates-Store"
+                    />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Random text<input type="checkbox" name="Random-text" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                </div>
+                <!---->
+                <div class=" col col-4 col-sm-12">
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Mobile app <input type="checkbox" name="Mobile-app" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >LP Senator free signals
+                    <input type="checkbox" name="LP-Senator-free-signals" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >LP DE Your choise<input
+                      type="checkbox"
+                      name="LP-DE-Your-choise"
+                    />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Invest wisely<input type="checkbox" name="Invest-wisely" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Toy Store LP Sign up page
+                    <input
+                      type="checkbox"
+                      name="Toy-Store-LP-Sign-up-page"
+                      checked="checked"
+                    />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Senator Account types
+                    <input
+                      type="checkbox"
+                      name="Senator-Account-Types"
+                      checked="checked"
+                    />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Senator Mobile app
+                    <input type="checkbox" name="Senator-Mobile-app" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Senator Store
+                    <input type="checkbox" name="Senator-Store" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Senator April Promo<input
+                      type="checkbox"
+                      name="Senator-April-Promo"
+                    />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Language Learning LP<input
+                      type="checkbox"
+                      name="Language-Learning-LP"
+                    />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                </div>
+                <!---->
+                <div class=" col col-4 col-sm-12">
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Your second site
+                    <input type="checkbox" name="Your-second-site" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Your second LP
+                    <input type="checkbox" name="Your-second-LP" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Landing page Money<input type="checkbox" name="Landing-page-Money" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >LP Your Choise<input type="checkbox" name="LPYourChoise" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >LP Wallet
+                    <input type="checkbox" name="LP_wallet" checked="checked" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >E Shop 02<input type="checkbox" name="E-Shop-02" checked="checked"/>
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Toy Store<input type="checkbox" name="Toy_Store" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >Book Store<input type="checkbox" name="Book_Store" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                  >Mobile app<input type="checkbox" name="Mobile_app" />
+                  <span class="checkmark"></span>
+                  <svg viewBox="0 0 24 22">
+                    <use xlink:href="#icon-show"></use>
+                  </svg>
+                </label>
+                <!-- ---------------- -->
+                <label class="checkbox-component"
+                >LP Senator free signals<input type="checkbox" name="LP_Senator_free_signals" />
+                <span class="checkmark"></span>
+                <svg viewBox="0 0 24 22">
+                  <use xlink:href="#icon-show"></use>
+                </svg>
+              </label>
+              <!-- ---------------- -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- modal footer -->
+        <div class="modal-footer">
+          <form>
+            <input type="text" name="message" placeholder="Generated link" />
+
+            <button id="copyLinkBtn" class="btn btn-copy-link">
+              <svg viewBox="0 0 24 16">
+                <use xlink:href="#icon-links"></use>
+              </svg>
+              Copy link
+            </button>
+            <button id="SaveBtn" class="btn btn-save">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL banners -->
+    <div class="modal modal-banners" id="banners-modal" style="display: none">
+      <div class="modal-inner">
+        <!-- modal header -->
+        <div class="modal-header">
+          <span class="close-modal" data-target="banners-modal">
+            <svg viewBox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+          </span>
+          <h1>ADD BANNERS</h1>
+
+          <!-- separator-line -->
+          <div class="separator-line"></div>
+        </div>
+        <div class="modal-body">
+          <div class="row row-compain">
+            <!-- ----- 1a --------- -->
+            <div class=" col col-5 col-sm-12">
+              <label for="scheme-name" class="form-label banners-label"
+                >Scheme name
+              </label>
+              <select name="scheme_name" id="scheme_name">
+                <option value="a">Name </option>
+                <option value="b">bbbb</option>
+                <option value="c">cccc</option>
+              </select>
+            </div>
+            <!-- ------ 2a -------- -->
+            <div class=" col col-5 col-sm-12">
+              <label for="compain" class="form-label banners-label">
+                Compain
+              </label>
+              <select name="compain" id="Compain">
+                <option value="a">Select </option>
+                <option value="b">bbbb</option>
+                <option value="c">cccc</option>
+              </select>
+            </div>
+            <!-- ------ 3a -------- -->
+            <div class=" col col-2 col-sm-12">
+                <label class="form-label url-label">Language </label>
+                <div class="flagselect">
+                  <input type="hidden" value="EN" />
+                  <div class="flagselect__chosen">
+                    <img src="images/flag/Flag_Nation_kingdom_.png" alt="EN" /> EN
+                  </div>
+                  <ul class="flagselect__flags">
+                    <li>
+                      <a data-index="EN" href="#"
+                        ><img
+                          src="images/flag/Flag_Nation_kingdom_.png"
+                          alt="EN"
+                        />EN</a
+                      >
+                    </li>
+                    <li>
+                      <a data-index="PL" href="#"
+                        ><img
+                          src="images/flag/Flag_Nation_poland_.png"
+                          alt="PL"
+                        />PL</a
+                      >
+                    </li>
+                    <li>
+                      <a data-index="DE" href="#"
+                        ><img src="images/flag/Germany_flag_.png" alt="DE" />DE</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
           </div>
 
           <div class="row row-compain">
@@ -1516,13 +1904,13 @@ subid=%p%
           <form>
             <input type="text" name="message" placeholder="Generated link" />
 
-            <button id="copyLinkBtn" class="btn btn-copy-link">
+            <button id="CopyLinkBtn" class="btn btn-copy-link">
               <svg viewBox="0 0 24 16">
                 <use xlink:href="#icon-links"></use>
               </svg>
               Copy link
             </button>
-            <button id="SaveBtn" class="btn btn-save">Save</button>
+            <button id="Save_Btn" class="btn btn-save">Save</button>
           </form>
         </div>
       </div>

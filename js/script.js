@@ -12,7 +12,16 @@ function showMenu() {
 
 iconHam.addEventListener("click", showMenu);
 
-// -M-O-D-A-L--
+// -- M-O-D-A-L-S --
+
+var modals = document.querySelectorAll(".modal");
+modals.forEach(function(modal) {
+  modal.addEventListener("click", function(e) {
+    if (e.target === this) {
+      modal.style.display = "none";
+    }
+  });
+});
 
 document.querySelectorAll(".show-modal").forEach(function(element) {
   element.addEventListener("click", function(e) {
@@ -54,7 +63,7 @@ function prepareSlider(input) {
   var unit = (inputMax - inputMin) / 100;
   var percent = (input.value - inputMin) / unit;
   input.style.setProperty("--value", percent);
-  label.style.setProperty("--value", percent);  
+  label.style.setProperty("--value", percent);
 }
 
 var sendAfterSlider = document.getElementById("send-after-slider");
@@ -64,23 +73,24 @@ sendAfterSlider.addEventListener("change", function(evt) {
   prepareSlider(input);
 });
 
-
 // -FLAG-
+const flagComponents = document.querySelectorAll(".flagselect");
+flagComponents.forEach(function(component) {
+  const flagChosen = component.querySelector(".flagselect__chosen");
+  const flagsList = component.querySelector(".flagselect__flags");
+  const flagInput = component.querySelector("input");
 
-const flagChosen = document.querySelector(".flagselect__chosen");
-const flagsList = document.querySelector(".flagselect__flags");
-const flagInput = document.querySelector(".flagselect input");
+  flagChosen.addEventListener("click", function() {
+    if (flagsList.style.display !== "block") flagsList.style.display = "block";
+    else flagsList.style.display = "none";
+  });
 
-flagChosen.addEventListener("click", function() {
-  if(flagsList.style.display !== "block") flagsList.style.display = "block";
-  else flagsList.style.display = "none";
-})
-
-flagsList.addEventListener("click", function(e) {
-  var elem;
-  if(e.target.tagName === "IMG") elem = e.target.parentNode
-  else elem = e.target
-  flagChosen.innerHTML = elem.innerHTML
-  flagInput.value = elem.dataset.index
-  flagsList.style.display = "none";
-})
+  flagsList.addEventListener("click", function(e) {
+    var elem;
+    if (e.target.tagName === "IMG") elem = e.target.parentNode;
+    else elem = e.target;
+    flagChosen.innerHTML = elem.innerHTML;
+    flagInput.value = elem.dataset.index;
+    flagsList.style.display = "none";
+  });
+});
