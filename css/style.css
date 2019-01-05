@@ -208,9 +208,7 @@ body { background-color: #b8b8b8; }
 
 .flagselect__flags { list-style-type: none; border: 1px solid #888; display: none; position: absolute; width: 108px; z-index: 999; background-color: #fff; }
 
-.flagselect__flags li { border-bottom: 1px solid #888; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; }
-
-.flagselect__flags li a { text-decoration: none; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; padding: 6px 10px; width: 100%; height: 100%; font-size: 14px; color: #000; }
+.flagselect__flags li { border-bottom: 1px solid #888; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; padding: 6px 10px; width: 100%; height: 100%; font-size: 14px; color: #000; }
 
 .form-label { color: #a6a6a6; font-weight: bold; text-align: left; display: inline-block; margin: 10px 0px; }
 
@@ -541,27 +539,25 @@ form .form-personal-data input[type="text"], form .form-personal-data input[type
 
 form .form-personal-data input[type="text"]:focus, form .form-personal-data input[type="email"]:focus, form .form-personal-data input[type="tel"]:focus, form .form-personal-data input[type="password"]:focus { border: 1px #2304d3 solid; }
 
-.scroll-wrapper { display: block; width: 100%; overflow-x: auto; }
+.pretty-table { border-collapse: collapse; width: 100%; max-width: 100%; margin-top: 30px; }
 
-.scroll-wrapper .detail-statistic-table, .scroll-wrapper .payout-history-table { border-collapse: collapse; width: 100%; max-width: 100%; margin-top: 30px; }
+.pretty-table tr { border-bottom: 1px solid #dddddd; }
 
-.scroll-wrapper .detail-statistic-table tr, .scroll-wrapper .payout-history-table tr { border-bottom: 1px solid #dddddd; }
+.pretty-table tr td, .pretty-table tr th { text-align: left; padding: 14px; color: #000; font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
 
-.scroll-wrapper .detail-statistic-table tr td, .scroll-wrapper .detail-statistic-table tr th, .scroll-wrapper .payout-history-table tr td, .scroll-wrapper .payout-history-table tr th { text-align: left; padding: 14px; color: #000; font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
+.pretty-table tr td { font-weight: 200; }
 
-.scroll-wrapper .detail-statistic-table tr td, .scroll-wrapper .payout-history-table tr td { font-weight: 200; }
+.pretty-table tr th { color: #ccc; white-space: nowrap; padding: 8px; }
 
-.scroll-wrapper .detail-statistic-table tr th, .scroll-wrapper .payout-history-table tr th { color: #ccc; white-space: nowrap; padding: 8px; }
+.pretty-table tr th .icon-arrowUp { vertical-align: middle; }
 
-.scroll-wrapper .detail-statistic-table tr th .icon-arrowUp, .scroll-wrapper .payout-history-table tr th .icon-arrowUp { vertical-align: middle; }
+.pretty-table tr th span { padding: 5px; }
 
-.scroll-wrapper .detail-statistic-table tr th span, .scroll-wrapper .payout-history-table tr th span { padding: 5px; }
+.pretty-table tr th span:hover { background-color: #f3f5f6; cursor: pointer; color: #000; font-weight: bolder; }
 
-.scroll-wrapper .detail-statistic-table tr th span:hover, .scroll-wrapper .payout-history-table tr th span:hover { background-color: #f3f5f6; cursor: pointer; color: #000; font-weight: bolder; }
+.pretty-table tr th span:hover .icon-arrowUp { color: #a6a6a6; }
 
-.scroll-wrapper .detail-statistic-table tr th span:hover .icon-arrowUp, .scroll-wrapper .payout-history-table tr th span:hover .icon-arrowUp { color: #a6a6a6; }
-
-.scroll-wrapper .detail-statistic-table tbody tr:hover, .scroll-wrapper .payout-history-table tbody tr:hover { background-color: #f3f5f6; cursor: pointer; }
+.pretty-table tbody tr:hover { background-color: #f3f5f6; cursor: pointer; }
 
 .pagination { display: inline-block; }
 
@@ -572,6 +568,27 @@ form .form-personal-data input[type="text"]:focus, form .form-personal-data inpu
 .pagination a:hover:not(.pagination-arrow) { background-color: #ddd; }
 
 .center-pagination { padding: 15px; text-align: center; }
+
+@media (max-width: 768px) { .responsive-table tbody tr:hover { background-color: #fff; }
+  .responsive-table thead { display: none; }
+  .responsive-table td { display: block; }
+  .responsive-table tr td { padding: 6px; }
+  .responsive-table tr td::before { font-weight: bold; margin-right: 20px; }
+  #detail-statistic-table tr td:first-child::before { content: "Tracker name:"; }
+  #detail-statistic-table tr td:nth-of-type(2n)::before { content: "Initiated date:"; }
+  #detail-statistic-table tr td:nth-of-type(3n)::before { content: "Visits:"; }
+  #detail-statistic-table tr td:nth-of-type(4n)::before { content: "Unique:"; }
+  #detail-statistic-table tr td:nth-of-type(5n)::before { content: "Signups:"; }
+  #detail-statistic-table tr td:nth-of-type(6n)::before { content: "FTD:"; }
+  #detail-statistic-table tr td:nth-of-type(7n)::before { content: "Depositors:"; }
+  #detail-statistic-table tr td:nth-of-type(8n)::before { content: "Deposits ($):"; }
+  #detail-statistic-table tr td:nth-of-type(9n)::before { content: "Payout ($):"; }
+  #detail-statistic-table tr td:nth-of-type(10n)::before { content: "Turnover:"; }
+  #detail-statistic-table tr td:nth-of-type(11n)::before { content: "Deal:"; }
+  #payout-history-table tr td:first-child::before { content: "Date:"; }
+  #payout-history-table tr td:nth-of-type(2n)::before { content: "Amount ($):"; }
+  #payout-history-table tr td:nth-of-type(3n)::before { content: "Deal:"; }
+  #payout-history-table tr td:nth-of-type(4n)::before { content: "Account:"; } }
 
 .postback .btn-create-pixel { float: right; padding: 2px 12px; }
 

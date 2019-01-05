@@ -1,60 +1,54 @@
-.scroll-wrapper {
-  display: block;
+.pretty-table {
+  border-collapse: collapse;
   width: 100%;
-  overflow-x: auto;
+  max-width: 100%;
+  margin-top: 30px;
 
-  .detail-statistic-table, .payout-history-table {
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 100%;
-    margin-top: 30px;
+  tr {
+    border-bottom: 1px solid #dddddd;
 
-    tr {
-      border-bottom: 1px solid #dddddd;
+    td,
+    th {
+      text-align: left;
+      padding: 14px;
+      color: #000;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+    }
 
-      td,
-      th {
-        text-align: left;
-        padding: 14px;
-        color: #000;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 12px;
+    td {
+      font-weight: 200;
+    }
+
+    th {
+      color: #ccc;
+      white-space: nowrap;
+      padding: 8px;
+
+      .icon-arrowUp {
+        vertical-align: middle;
       }
 
-      td {
-        font-weight: 200;
-      }
+      span {
+        padding: 5px;
 
-      th {
-        color: #ccc;
-        white-space: nowrap;
-        padding: 8px;
+        &:hover {
+          background-color: #f3f5f6;
+          cursor: pointer;
+          color: #000;
+          font-weight: bolder;
 
-        .icon-arrowUp {
-          vertical-align: middle;
-        }
-
-        span {
-          padding: 5px;
-
-          &:hover {
-            background-color: #f3f5f6;
-            cursor: pointer;
-            color: #000;
-            font-weight: bolder;
-
-            .icon-arrowUp {
-              color: $main-font-color;
-            }
+          .icon-arrowUp {
+            color: $main-font-color;
           }
         }
       }
     }
+  }
 
-    tbody tr:hover {
-      background-color: #f3f5f6;
-      cursor: pointer;
-    }
+  tbody tr:hover {
+    background-color: #f3f5f6;
+    cursor: pointer;
   }
 }
 
@@ -83,4 +77,97 @@
 .center-pagination {
   padding: 15px;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .responsive-table {
+    tbody tr:hover {
+      background-color: #fff;
+    }
+
+    thead {
+      display: none;
+    }
+
+    td {
+      display: block;
+    }
+    tr td {
+      padding: 6px;
+    }
+
+    tr td::before {
+      font-weight: bold;
+      margin-right: 20px;
+    }
+  }
+
+
+#detail-statistic-table {
+  
+  tr td:first-child::before {
+    content: "Tracker name:";
+  }
+
+  tr td:nth-of-type(2n)::before {
+    content: "Initiated date:";
+  }
+
+  tr td:nth-of-type(3n)::before {
+    content: "Visits:";
+  }
+
+  tr td:nth-of-type(4n)::before {
+    content: "Unique:";
+  }
+
+  tr td:nth-of-type(5n)::before {
+    content: "Signups:";
+  }
+
+  tr td:nth-of-type(6n)::before {
+    content: "FTD:";
+  }
+
+  tr td:nth-of-type(7n)::before {
+    content: "Depositors:";
+  }
+
+  tr td:nth-of-type(8n)::before {
+    content: "Deposits ($):";
+  }
+
+  tr td:nth-of-type(9n)::before {
+    content: "Payout ($):";
+  }
+
+  tr td:nth-of-type(10n)::before {
+    content: "Turnover:";
+  }
+
+  tr td:nth-of-type(11n)::before {
+    content: "Deal:";
+  }
+}
+
+#payout-history-table {
+  
+  tr td:first-child::before {
+    content: "Date:";
+  }
+
+  tr td:nth-of-type(2n)::before {
+    content: "Amount ($):";
+  }
+
+  tr td:nth-of-type(3n)::before {
+    content: "Deal:";
+  }
+
+  tr td:nth-of-type(4n)::before {
+    content: "Account:";
+  }
+
+} 
+
 }

@@ -352,7 +352,9 @@
       <!-- LINKS -->
       <section id="links" class="displayBox">
         <h1>LINKS</h1>
-        <button class="btn btn-center show-modal" data-target="url-modal">+ add new</button>
+        <button class="btn btn-center show-modal" data-target="url-modal">
+          + add new
+        </button>
         <!-- 1 -->
         <div class="row table-link first-table-link">
           <div class="col col-4 col-sm-12">Home page</div>
@@ -795,9 +797,9 @@
         <!-- separator-line -->
         <div class="separator-line"></div>
 
-        <div class="scroll-wrapper">
+  
           <!-- TABLE -->
-          <table class="detail-statistic-table">
+          <table class="pretty-table responsive-table" id="detail-statistic-table">
             <!-- TABLE HEAD -->
             <thead>
               <tr>
@@ -943,7 +945,7 @@
               </tr>
             </tbody>
           </table>
-        </div>
+        
 
         <!-- PAGINATION -->
         <div class="center-pagination">
@@ -980,8 +982,7 @@
 
         <!-- separator-line -->
         <div class="separator-line"></div>
-        <div class="scroll-wrapper">
-          <table class="payout-history-table">
+          <table class="pretty-table responsive-table" id="payout-history-table">
             <thead>
               <tr>
                 <th>
@@ -1060,7 +1061,6 @@
               </tr>
             </tbody>
           </table>
-        </div>
         <!-- PAGINATION -->
         <div class="center-pagination">
           <div class="pagination">
@@ -1280,26 +1280,17 @@ subid=%p%
                   <img src="images/flag/Flag_Nation_kingdom_.png" alt="EN" /> EN
                 </div>
                 <ul class="flagselect__flags">
-                  <li>
-                    <a data-index="EN" href="#"
-                      ><img
-                        src="images/flag/Flag_Nation_kingdom_.png"
-                        alt="EN"
-                      />EN</a
-                    >
+                  <li data-index="EN">
+                    <img
+                      src="images/flag/Flag_Nation_kingdom_.png"
+                      alt="EN"
+                    />EN
                   </li>
-                  <li>
-                    <a data-index="PL" href="#"
-                      ><img
-                        src="images/flag/Flag_Nation_poland_.png"
-                        alt="PL"
-                      />PL</a
-                    >
+                  <li data-index="PL">
+                    <img src="images/flag/Flag_Nation_poland_.png" alt="PL" />PL
                   </li>
-                  <li>
-                    <a data-index="DE" href="#"
-                      ><img src="images/flag/Germany_flag_.png" alt="DE" />DE</a
-                    >
+                  <li data-index="DE">
+                    <img src="images/flag/Germany_flag_.png" alt="DE" />DE
                   </li>
                 </ul>
               </div>
@@ -1307,13 +1298,12 @@ subid=%p%
           </div>
 
           <div class="row row-select-url-websites">
-              <h1>Select websites</h1>
+            <h1>Select websites</h1>
             <div class="scrollbar-component">
               <div class="scrollbar">
                 <div class="force-overflow"></div>
                 <!---->
                 <div class=" col col-4 col-sm-12">
-
                   <!-- ---------------- -->
                   <label class="checkbox-component"
                     >Landing page Money
@@ -1532,7 +1522,10 @@ subid=%p%
                   </label>
                   <!-- ---------------- -->
                   <label class="checkbox-component"
-                    >Landing page Money<input type="checkbox" name="Landing-page-Money" />
+                    >Landing page Money<input
+                      type="checkbox"
+                      name="Landing-page-Money"
+                    />
                     <span class="checkmark"></span>
                     <svg viewBox="0 0 24 22">
                       <use xlink:href="#icon-show"></use>
@@ -1557,7 +1550,11 @@ subid=%p%
                   </label>
                   <!-- ---------------- -->
                   <label class="checkbox-component"
-                    >E Shop 02<input type="checkbox" name="E-Shop-02" checked="checked"/>
+                    >E Shop 02<input
+                      type="checkbox"
+                      name="E-Shop-02"
+                      checked="checked"
+                    />
                     <span class="checkmark"></span>
                     <svg viewBox="0 0 24 22">
                       <use xlink:href="#icon-show"></use>
@@ -1581,21 +1578,24 @@ subid=%p%
                   </label>
                   <!-- ---------------- -->
                   <label class="checkbox-component"
-                  >Mobile app<input type="checkbox" name="Mobile_app" />
-                  <span class="checkmark"></span>
-                  <svg viewBox="0 0 24 22">
-                    <use xlink:href="#icon-show"></use>
-                  </svg>
-                </label>
-                <!-- ---------------- -->
-                <label class="checkbox-component"
-                >LP Senator free signals<input type="checkbox" name="LP_Senator_free_signals" />
-                <span class="checkmark"></span>
-                <svg viewBox="0 0 24 22">
-                  <use xlink:href="#icon-show"></use>
-                </svg>
-              </label>
-              <!-- ---------------- -->
+                    >Mobile app<input type="checkbox" name="Mobile_app" />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
+                  <label class="checkbox-component"
+                    >LP Senator free signals<input
+                      type="checkbox"
+                      name="LP_Senator_free_signals"
+                    />
+                    <span class="checkmark"></span>
+                    <svg viewBox="0 0 24 22">
+                      <use xlink:href="#icon-show"></use>
+                    </svg>
+                  </label>
+                  <!-- ---------------- -->
                 </div>
               </div>
             </div>
@@ -1657,37 +1657,31 @@ subid=%p%
             </div>
             <!-- ------ 3a -------- -->
             <div class=" col col-2 col-sm-12">
-                <label class="form-label url-label">Language </label>
-                <div class="flagselect">
-                  <input type="hidden" value="EN" />
-                  <div class="flagselect__chosen">
-                    <img src="images/flag/Flag_Nation_kingdom_.png" alt="EN" /> EN
-                  </div>
-                  <ul class="flagselect__flags">
-                    <li>
-                      <a data-index="EN" href="#"
-                        ><img
-                          src="images/flag/Flag_Nation_kingdom_.png"
-                          alt="EN"
-                        />EN</a
-                      >
-                    </li>
-                    <li>
-                      <a data-index="PL" href="#"
-                        ><img
-                          src="images/flag/Flag_Nation_poland_.png"
-                          alt="PL"
-                        />PL</a
-                      >
-                    </li>
-                    <li>
-                      <a data-index="DE" href="#"
-                        ><img src="images/flag/Germany_flag_.png" alt="DE" />DE</a
-                      >
-                    </li>
-                  </ul>
+              <label class="form-label url-label">Language </label>
+              <div class="flagselect">
+                <input type="hidden" value="EN" />
+                <div class="flagselect__chosen">
+                  <img src="images/flag/Flag_Nation_kingdom_.png" alt="EN" /> EN
                 </div>
+                <ul class="flagselect__flags">
+                    <li data-index="EN"
+                      ><img
+                        src="images/flag/Flag_Nation_kingdom_.png"
+                        alt="EN"
+                      />EN</li
+                    >
+                    <li data-index="PL"
+                      ><img
+                        src="images/flag/Flag_Nation_poland_.png"
+                        alt="PL"
+                      />PL</li
+                    >
+                    <li data-index="DE" 
+                      ><img src="images/flag/Germany_flag_.png" alt="DE" />DE</li
+                    >
+                </ul>
               </div>
+            </div>
           </div>
 
           <div class="row row-compain">
