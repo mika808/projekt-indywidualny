@@ -33,4 +33,12 @@
 @import "sections/details";
 @import "sections/postback";
 
-
+.link-anchord {
+  button{
+    background-color: transparent;
+    border: transparent;
+    border-style: none;
+    height: 30px;
+  }
+  
+}

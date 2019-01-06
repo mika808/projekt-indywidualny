@@ -101,22 +101,26 @@ svg {
     max-width: inherit;
     position: fixed;
 
-hr {
-  margin-bottom: 10px;
-}
+    hr {
+      margin-bottom: 10px;
+    }
 
     .people {
       img {
         width: 30px;
         height: 30px;
-        margin: 0 -10px;
-        
+        margin: 0 -7px;
       }
       .badge {
-        top: -29px;
+        top: -31px;
         right: -11px;
         width: 8px;
         height: 8px;
+      }
+      span {
+        top: 410px;
+        left: 59px;
+        display: block;
       }
     }
     .logo,
@@ -146,15 +150,19 @@ hr {
   }
 
   .sidebar.responsive {
-    position: relative;
+    position: fixed;
+    width: 200px;
+
     .icon-hamburger {
       position: relative;
       right: 0;
       top: 0;
     }
 
+    a,
     .part2Sidebar {
       display: block;
+      color: #818181;
     }
 
     a {
@@ -162,6 +170,21 @@ hr {
       clear: both;
       display: block;
       text-align: left;
+    }
+    .top-menu-mobile {
+      li, a {
+        border-left: none;
+      }
+
+      li:hover {
+        background-color: transparent;
+        border-left: none;
+      }
+
+      a:hover {
+        background-color: transparent;
+        border-left: none;
+      }
     }
   }
 }

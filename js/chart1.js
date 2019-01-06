@@ -28,7 +28,6 @@ var myChart = new Chart(ctx, {
       }
     ]
   },
-
   options: {
     title: {
       display: true,

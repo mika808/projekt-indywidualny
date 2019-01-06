@@ -228,12 +228,8 @@
                 <svg viewBox="0 0 24 24">
                   <use xlink:href="#icon-wallet"></use>
                 </svg>
-                $ 2.000 <i class="fa fa-caret-down"></i>
+                $ 2.000
               </a>
-              <ul>
-                <li><a href="#"> € 2.000</a></li>
-                <li><a href="#"> &pound; 2.000</a></li>
-              </ul>
             </li>
             <!-- __________________ -->
             <li>
@@ -247,7 +243,7 @@
 
             <!-- __________________ -->
             <li>
-              <a href="#">
+                <a href="#" class="show-modal" data-target="login-modal">
                 <svg viewBox="0 0 24 24">
                   <use xlink:href="#icon-profile"></use>
                 </svg>
@@ -256,7 +252,7 @@
             </li>
             <!-- __________________ -->
             <li>
-              <a href="#">
+                <a href="#" class="show-modal" data-target="exit-modal">
                 <svg viewBox="0 0 24 24">
                   <use xlink:href="#icon-quit"></use>
                 </svg>
@@ -308,19 +304,27 @@
         </li>
       </ul>
     </nav>
-
+    <a id="general" class="anchord"></a>
     <div class="container">
       <!-- GENERAL STATISTIC -->
-      <section id="general" class="displayBox">
+      <section class="displayBox">
         <h1>GENERAL STATISTIC</h1>
 
-        <div class="calendar">
-          <input type="date" /> <input type="date" />
-          <button class="btn btn-refresh">
-            <svg viewBox="0 0 24 24" xml:space="preserve">
-              <use xlink:href="#icon-refresh"></use>
-            </svg>
-          </button>
+        <div class="calendar row">
+          <div class= "col col-5 col-sm-12">
+              <input type="date" />
+          </div>
+          <div class= "col col-5 col-sm-12">
+              <input type="date" />
+          </div>
+          <div class= "col col-2 col-sm-12">
+              <button class="btn btn-refresh">
+                  <svg viewBox="0 0 24 24" xml:space="preserve">
+                    <use xlink:href="#icon-refresh"></use>
+                  </svg>
+                </button>
+          </div>
+          
         </div>
 
         <!-- separator-line -->
@@ -344,14 +348,22 @@
           </div>
         </div>
 
-        <div id="chart">
-          <canvas id="myChart" width="500" height="400"></canvas>
+        <div id="chart" class="earnings-chart">
+          <canvas id="myChart" width="500" height="400">
+          </canvas>
+          
+          <div class="link-anchord">
+          <a id="links" class="anchord"></a>
+          <button></button>
+          </div>
         </div>
       </section>
 
       <!-- LINKS -->
-      <section id="links" class="displayBox">
+      
+      <section class="displayBox">
         <h1>LINKS</h1>
+        
         <button class="btn btn-center show-modal" data-target="url-modal">
           + add new
         </button>
@@ -525,20 +537,22 @@
             </div>
           </div>
         </div>
+        <a id="banners" class="anchord"></a>
         <button class="btn btn-center show-modal" data-target="url-modal">
           + add new
         </button>
       </section>
 
       <!-- BANNERS -->
-      <section id="banners" class="displayBox">
+      <section class="displayBox">
         <h1>BANNERS</h1>
         <button class="btn btn-center show-modal" data-target="banners-modal">
           + add new
         </button>
         <!-- 1 -->
         <div class="row table-link">
-          <div class="col col-4 col-sm-12">Banner main</div>
+          <div class="col col-4 col-sm-12">Banner main
+          </div>
           <div class="col col-5 col-sm-12">
             <a href="http://www.website.com/bannermain.gif"
               >http://www.website.com/bannermain.gif</a
@@ -650,14 +664,15 @@
             </div>
           </div>
         </div>
-
+        <a id="personalData" class="anchord"></a>
         <button class="btn btn-center show-modal" data-target="banners-modal">
           + add new
         </button>
+        
       </section>
 
       <!-- PERSONAL DATA -->
-      <section id="personalData" class="displayBox">
+      <section class="displayBox">
         <h1>PERSONAL DATA</h1>
 
         <!-- FORM -->
@@ -778,22 +793,31 @@
           <!-- separator-line -->
 
           <div class="separator-line"></div>
-
+          <a id="details" class="anchord"></a>
           <button type="submit" class="btn btn-center">Save</button>
         </form>
+        
       </section>
 
       <!-- DETAIL STATISTIC -->
-      <section id="details" class="displayBox">
+      <section class="displayBox">
         <h1>DETAIL STATISTIC</h1>
-        <div class="calendar">
-          <input type="date" /> <input type="date" />
-          <button class="btn btn-refresh">
-            <svg viewBox="0 0 24 24" xml:space="preserve">
-              <use xlink:href="#icon-refresh"></use>
-            </svg>
-          </button>
-        </div>
+        <div class="calendar row">
+            <div class= "col col-5 col-sm-12">
+                <input type="date" />
+            </div>
+            <div class= "col col-5 col-sm-12">
+                <input type="date" />
+            </div>
+            <div class= "col col-2 col-sm-12">
+                <button class="btn btn-refresh">
+                    <svg viewBox="0 0 24 24" xml:space="preserve">
+                      <use xlink:href="#icon-refresh"></use>
+                    </svg>
+                  </button>
+            </div>
+            
+          </div>
         <!-- separator-line -->
         <div class="separator-line"></div>
 
@@ -959,26 +983,35 @@
             <a href="#">3</a> <a href="#">4</a> <a href="#">5</a>
             <a href="#">6</a> <a href="#">7</a> <a href="#">8</a>
             <a href="#">9</a>
+            <a id="payout" class="anchord"></a>
             <a class="pagination-arrow" href="#">
               <svg viewBox="0 0 24 24" xml:space="preserve">
                 <use xlink:href="#icon-arrowRight"></use>
-              </svg>
-            </a>
+              </svg></a>
+            
           </div>
         </div>
       </section>
 
       <!-- PAYOUT -->
-      <section id="payout" class="displayBox">
+      <section class="displayBox">
         <h1>PAYOUT HISTORY</h1>
-        <div class="calendar">
-          <input type="date" /> <input type="date" />
-          <button class="btn btn-refresh">
-            <svg viewBox="0 0 24 24" xml:space="preserve">
-              <use xlink:href="#icon-refresh"></use>
-            </svg>
-          </button>
-        </div>
+        <div class="calendar row">
+            <div class= "col col-5 col-sm-12">
+                <input type="date" />
+            </div>
+            <div class= "col col-5 col-sm-12">
+                <input type="date" />
+            </div>
+            <div class= "col col-2 col-sm-12">
+                <button class="btn btn-refresh">
+                    <svg viewBox="0 0 24 24" xml:space="preserve">
+                      <use xlink:href="#icon-refresh"></use>
+                    </svg>
+                  </button>
+            </div>
+            
+          </div>
 
         <!-- separator-line -->
         <div class="separator-line"></div>
@@ -1073,17 +1106,19 @@
             <a href="#">3</a> <a href="#">4</a> <a href="#">5</a>
             <a href="#">6</a> <a href="#">7</a> <a href="#">8</a>
             <a href="#">9</a>
+            <a id="postback" class="anchord"></a>
             <a class="pagination-arrow" href="#">
-              <svg viewBox="0 0 15 15" xml:space="preserve">
+              <svg viewBox="0 0 24 24" xml:space="preserve">
                 <use xlink:href="#icon-arrowRight"></use>
               </svg>
             </a>
+            
           </div>
         </div>
       </section>
 
       <!-- POSTBACK -->
-      <section id="postback" class="displayBox postback">
+      <section class="displayBox postback">
         <h1>NEW POSTBACK</h1>
         <p>You can insert some parameters in this postback:</p>
         <!-- FORM SIGNUP -->
@@ -1606,13 +1641,13 @@ subid=%p%
           <form>
             <input type="text" name="message" placeholder="Generated link" />
 
-            <button id="copyLinkBtn" class="btn btn-copy-link">
+            <button id="copyLinkBtn" class="btn btn-copy-link close-modal" data-target="banners-modal">
               <svg viewBox="0 0 24 16">
                 <use xlink:href="#icon-links"></use>
               </svg>
               Copy link
             </button>
-            <button id="SaveBtn" class="btn btn-save">Save</button>
+            <button id="SaveBtn" class="btn btn-save close-modal" data-target="url-modal">Save</button>
           </form>
         </div>
       </div>
@@ -1898,13 +1933,13 @@ subid=%p%
           <form>
             <input type="text" name="message" placeholder="Generated link" />
 
-            <button id="CopyLinkBtn" class="btn btn-copy-link">
+            <button id="CopyLinkBtn" class="btn btn-copy-link close-modal" data-target="banners-modal">
               <svg viewBox="0 0 24 16">
                 <use xlink:href="#icon-links"></use>
               </svg>
               Copy link
             </button>
-            <button id="Save_Btn" class="btn btn-save">Save</button>
+            <button id="Save_Btn" class="btn btn-save close-modal" data-target="banners-modal">Save</button>
           </form>
         </div>
       </div>

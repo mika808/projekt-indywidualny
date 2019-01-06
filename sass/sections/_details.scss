@@ -1,6 +1,8 @@
 .pretty-table {
   border-collapse: collapse;
   width: 100%;
+  overflow-x: auto;
+  display: block;
   max-width: 100%;
   margin-top: 30px;
 
@@ -18,6 +20,7 @@
 
     td {
       font-weight: 200;
+      width: 100vw;
     }
 
     th {
@@ -80,6 +83,20 @@
 }
 
 @media (max-width: 768px) {
+  .pagination {
+    svg {
+      width: 10px;
+      height: 10px;
+      margin-left: -18px;
+      vertical-align: middle;
+    }
+
+    a {
+      padding: 4px 8px;
+      font-size: 10px;
+    }
+  }
+
   .responsive-table {
     tbody tr:hover {
       background-color: #fff;
@@ -102,72 +119,67 @@
     }
   }
 
+  #detail-statistic-table {
+    tr td:first-child::before {
+      content: "Tracker name:";
+    }
 
-#detail-statistic-table {
-  
-  tr td:first-child::before {
-    content: "Tracker name:";
+    tr td:nth-of-type(2n)::before {
+      content: "Initiated date:";
+    }
+
+    tr td:nth-of-type(3n)::before {
+      content: "Visits:";
+    }
+
+    tr td:nth-of-type(4n)::before {
+      content: "Unique:";
+    }
+
+    tr td:nth-of-type(5n)::before {
+      content: "Signups:";
+    }
+
+    tr td:nth-of-type(6n)::before {
+      content: "FTD:";
+    }
+
+    tr td:nth-of-type(7n)::before {
+      content: "Depositors:";
+    }
+
+    tr td:nth-of-type(8n)::before {
+      content: "Deposits ($):";
+    }
+
+    tr td:nth-of-type(9n)::before {
+      content: "Payout ($):";
+    }
+
+    tr td:nth-of-type(10n)::before {
+      content: "Turnover:";
+    }
+
+    tr td:nth-of-type(11n)::before {
+      content: "Deal:";
+    }
   }
 
-  tr td:nth-of-type(2n)::before {
-    content: "Initiated date:";
+  #payout-history-table {
+    tr td:first-child::before {
+      content: "Date:";
+    }
+
+    tr td:nth-of-type(2n)::before {
+      content: "Amount ($):";
+    }
+
+    tr td:nth-of-type(3n)::before {
+      content: "Deal:";
+    }
+
+    tr td:nth-of-type(4n)::before {
+      content: "Account:";
+    }
   }
-
-  tr td:nth-of-type(3n)::before {
-    content: "Visits:";
-  }
-
-  tr td:nth-of-type(4n)::before {
-    content: "Unique:";
-  }
-
-  tr td:nth-of-type(5n)::before {
-    content: "Signups:";
-  }
-
-  tr td:nth-of-type(6n)::before {
-    content: "FTD:";
-  }
-
-  tr td:nth-of-type(7n)::before {
-    content: "Depositors:";
-  }
-
-  tr td:nth-of-type(8n)::before {
-    content: "Deposits ($):";
-  }
-
-  tr td:nth-of-type(9n)::before {
-    content: "Payout ($):";
-  }
-
-  tr td:nth-of-type(10n)::before {
-    content: "Turnover:";
-  }
-
-  tr td:nth-of-type(11n)::before {
-    content: "Deal:";
-  }
-}
-
-#payout-history-table {
-  
-  tr td:first-child::before {
-    content: "Date:";
-  }
-
-  tr td:nth-of-type(2n)::before {
-    content: "Amount ($):";
-  }
-
-  tr td:nth-of-type(3n)::before {
-    content: "Deal:";
-  }
-
-  tr td:nth-of-type(4n)::before {
-    content: "Account:";
-  }
-
-} 
-
 }
